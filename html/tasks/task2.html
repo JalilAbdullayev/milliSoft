@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="az">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -148,15 +148,15 @@
     </label>
     <input type="email" id="email"/>
     <br/><br/>
-    <label for="password">
+    <label for="passkey">
         Password:
     </label>
-    <input type="password" id="password"/>
+    <input type="password" id="passkey"/>
     <br/><br/>
-    <label for="phone">
+    <label for="tel">
         Phone:
     </label>
-    <input type="tel" id="phone"/>
+    <input type="tel" id="tel"/>
     <br/><br/>
     <label>
         Gender:
@@ -173,8 +173,21 @@
     <label>
         Date of Birth:
     </label>
-    <!-- soruş -->
-    <input type="date" value="Date"/>
+    <select>
+        <option>
+            Date
+        </option>
+    </select>
+    <select>
+        <option>
+            Month
+        </option>
+    </select>
+    <select>
+        <option>
+            Year
+        </option>
+    </select>
     <br/><br/>
     <input type="submit" value="Send"/>
 </form>
@@ -304,10 +317,10 @@
             Username*
         </label><br/>
         <input type="text" id="username"/><br/>
-        <label for="password">
+        <label for="key">
             Password*
         </label><br/>
-        <input type="text" id="password"/>
+        <input type="text" id="key"/>
     </fieldset>
     <fieldset>
         <legend>
@@ -343,10 +356,10 @@
         <legend>
             Country
         </legend>
-        <label for="country">
+        <label for="states">
             Choose a country
         </label>
-        <select id="country">
+        <select id="states">
             <option>
                 Azerbaijan
             </option>
@@ -369,30 +382,30 @@
         </label>
         <input type="text" id="name"/>
         <br/><br/>
-        <label for="email">
+        <label for="mail">
             Email:
         </label>
-        <input type="email" id="email"/>
+        <input type="email" id="mail"/>
         <br/><br/>
-        <label for="password">
+        <label for="pass">
             Password:
         </label>
-        <input type="password" id="password"/>
+        <input type="password" id="pass"/>
         <br/><br/>
-        <label for="phone">
+        <label for="num">
             Phone:
         </label>
-        <input type="tel" id="phone"/>
+        <input type="tel" id="num"/>
         <br/><br/>
         <label>
             Gender:
         </label>
-        <input type="radio" name="gender" id="male"/>
-        <label for="male">
+        <input type="radio" name="gender" id="man"/>
+        <label for="man">
             Male
         </label>
-        <input type="radio" name="gender" id="female"/>
-        <label for="female">
+        <input type="radio" name="gender" id="woman"/>
+        <label for="woman">
             Female
         </label>
         <br/><br/>
@@ -401,10 +414,10 @@
         </label>
         <input type="date" value="Date"/>
         <br/><br/>
-        <label for="country">
+        <label for="countries">
             Country:
         </label>
-        <select id="country">
+        <select id="countries">
             <option>
                 Choose the country
             </option>
@@ -604,7 +617,7 @@
     </tbody>
 </table>
 <br/><br/>
-<table border="1" rules="all">
+<table border="1" rules="all" cellpadding="10">
     <thead>
     <tr>
         <th rowspan="3">
