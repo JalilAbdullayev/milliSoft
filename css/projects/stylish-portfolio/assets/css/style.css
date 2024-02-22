@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #212529;
+    font: 400 1rem "Source Sans 3";
+    overflow-x: hidden;
+}
+
+header {
+    background-image: url("../image/header.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding-top: 37vh;
+
+    h1 {
+        font: 5.5rem "Source Sans 3";
+        line-height: 1.2;
+    }
+
+    h3 {
+        font: 700 1.75rem "Source Sans 3";
+        margin-bottom: 3rem;
+    }
+
+    a {
+        display: block;
+        padding: 1.25rem 2.5rem;
+        margin: auto;
+        background-color: #196D87;
+        width: 176px;
+        height: 66px;
+        border: none;
+        color: #FFF;
+        border-radius: 5px;
+        text-decoration: none;
+
+        &:hover {
+            transition: 0.5s;
+            background-color: #17667F;
+        }
+    }
+}
+
+#about {
+    text-align: center;
+    padding: 7.5rem 0;
+
+    h2 {
+        font: 700 2rem "Source Sans 3";
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font: 300 1.25rem "Source Sans 3";
+        margin-bottom: 3rem;
+
+        a {
+            color: #1D809F;
+        }
+    }
+
+    #offer {
+        display: block;
+        width: 176px;
+        height: 66px;
+        padding: 1.25rem 2.5rem;
+        background-color: #212529;
+        border: none;
+        color: #FFF;
+        border-radius: 5px;
+        text-decoration: none;
+        margin: auto;
+
+        &:hover {
+            transition: 0.5s;
+            background-color: #424649;
+        }
+    }
+}
+
+#services {
+    text-align: center;
+    background-color: rgb(29, 128, 159);
+    padding: 7.5rem 0;
+
+    h3 {
+        color: rgb(236, 184, 7);
+    }
+
+    h2 {
+        margin-bottom: 48px;
+        color: #FFF;
+        font: 700 3rem "Source Sans 3";
+    }
+
+    #allservices {
+        .service {
+            display: inline-block;
+            padding: 0 1.5rem;
+
+            .circle {
+                background-color: #FFF;
+                border-radius: 50%;
+                height: 7rem;
+                width: 7rem;
+                display: block;
+                line-height: 7.5rem;
+                font-size: 2.25rem;
+                color: #1D809F;
+                margin: auto auto 16px;
+            }
+
+            strong {
+                color: #FFF;
+                margin-bottom: 0.5rem;
+                font: 700 1.5rem "Source Sans 3";
+            }
+
+            p {
+                color: rgba(255, 255, 255, 0.7);
+
+                svg {
+                    box-sizing: content-box;
+                    height: 1em;
+                }
+            }
+        }
+    }
+}
+
+#callout {
+    padding: 15rem 0;
+    background-image: url("../image/callout.jpg");
+    background-position: center;
+    background-size: cover;
+
+    h2 {
+        text-align: center;
+        font: 700 3.5rem "Source Sans 3";
+        max-width: 30rem;
+        margin: auto auto 3rem;
+    }
+
+    a {
+        margin: auto;
+        background-color: #196D87;
+        width: 188px;
+        height: 66px;
+        border: none;
+        color: #FFF;
+        border-radius: 5px;
+        display: block;
+        text-decoration: none;
+        padding: 1.25rem 2.5rem;
+
+        &:hover {
+            transition: 0.5s;
+            background-color: #17667F;
+        }
+    }
+}
+
+#portfolio {
+    h3 {
+        text-align: center;
+        font: 700 1rem "Source Sans 3";
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
