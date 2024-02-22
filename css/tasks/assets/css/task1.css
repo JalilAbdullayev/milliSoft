@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+}
+
+#first {
+    p {
+        text-transform: lowercase;
+        background-color: aquamarine;
+        border: 0.5px solid black;
+    }
+
+    #secondp {
+        text-align: center;
+    }
+
+    #thirdp {
+        text-align: right;
+    }
+
+    #fourthp {
+        text-align: justify;
+    }
+
+    #fifthp {
+        text-align: justify;
+        text-align-last: center;
+    }
+}
+
+#second {
+    text-align: center;
+
+    div {
+        padding: 10px 0;
+        margin: 10px 0;
+    }
+
+    #gray {
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    #blue {
+        font-style: italic;
+        border: 2px solid blue;
+    }
+
+    #dotted {
+        text-decoration: line-through;
+        border: 3px dotted black;
+    }
+
+    #dashed {
+        text-decoration: overline;
+        border: 3px gray dashed;
+    }
+
+    #double {
+        text-decoration: underline;
+        border: 3px double gray;
+    }
+
+    #colorful {
+        text-transform: uppercase;
+        border-width: 3px;
+        border-style: solid;
+        border-top-color: purple;
+        border-right-color: orange;
+        border-bottom-color: firebrick;
+        border-left-color: blue;
+    }
+
+    #mixed {
+        background-color: rgba(0, 0, 0, 0.05);
+        border-width: 3px;
+        border-right-style: dotted;
+        border-right-color: purple;
+        border-bottom-style: double;
+        border-bottom-color: orange;
+        border-left-style: dashed;
+        border-left-color: firebrick;
+    }
+}
+
+#menu {
+    width: 7%;
+    font-style: italic;
+    font-weight: bold;
+    background-color: lightslategrey;
+
+    div {
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: black;
+    }
+}
+
+#boxes {
+    text-align: center;
+
+    div {
+        width: 7%;
+        margin: 20px 0;
+    }
+
+    #solid {
+        border: 3px solid goldenrod;
+    }
+
+    #dotted {
+        border: 3px dotted goldenrod;
+        margin-left: 50px;
+    }
+
+    #dashed {
+        border: 3px dashed goldenrod;
+        margin-left: 100px;
+    }
+
+    #double {
+        border: 3px double goldenrod;
+        margin-left: 150px;
+    }
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    margin-bottom: 10px;
+
+    tbody tr:nth-child(odd) {
+        background-color: lightgray;
+    }
+
+    th, td {
+        padding: 0 20px;
+    }
+}
+
+#figures {
+    div {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        margin: 10px 30px;
+        background-color: sandybrown;
+        border: 3px solid firebrick;
+    }
+
+    #first {
+        border-radius: 10px;
+    }
+
+    #second {
+        border-radius: 25px 0;
+    }
+
+    #third {
+        border-radius: 50% 50% 0 0;
+    }
+
+    #fourth {
+        border-radius: 90% 0 0;
+    }
+
+    #fifth {
+        border-radius: 0 50%;
+    }
+
+    #sixth {
+        border-radius: 0 90% 0 90%;
+    }
+
+    #seventh {
+        border-radius: 50% 50% 0;
+    }
+
+    #eighth {
+        border-radius: 100%;
+    }
+}
+
+#jumbotron {
+    margin: auto auto 50px;
+    width: 50%;
+    box-shadow: 10px 5px 50px 10px rgba(0, 0, 0, 0.5);
+
+    #header {
+        background-color: dodgerblue;
+        color: white;
+        padding-left: 10px;
+        line-height: 50px;
+    }
+
+    p {
+        margin: 5px 0;
+    }
+
+    #footer {
+        background-color: dodgerblue;
+        color: white;
+        padding-left: 10px;
+        line-height: 30px;
+    }
+}
+
+#card {
+    width: 25%;
+    margin: auto;
+    box-shadow: 10px 5px 50px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+
+    #name {
+        padding: 10px 15px;
+        font-weight: bold;
+    }
+
+    img {
+        margin: 0 0;
+        width: 100%;
+    }
+
+    #position {
+        padding: 10px 15px;
+    }
+}
