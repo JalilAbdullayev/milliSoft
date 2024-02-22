@@ -7,23 +7,22 @@
         text-transform: lowercase;
         background-color: aquamarine;
         border: 0.5px solid black;
-    }
 
-    #secondp {
-        text-align: center;
-    }
+        &:nth-child(2) {
+            text-align: center;
+        }
 
-    #thirdp {
-        text-align: right;
-    }
+        &:nth-child(3) {
+            text-align: right;
+        }
 
-    #fourthp {
-        text-align: justify;
-    }
+        &:nth-child(4), &:last-child {
+            text-align: justify;
+        }
 
-    #fifthp {
-        text-align: justify;
-        text-align-last: center;
+        &:last-child {
+            text-align-last: center;
+        }
     }
 }
 
@@ -33,65 +32,56 @@
     div {
         padding: 10px 0;
         margin: 10px 0;
-    }
 
-    #gray {
-        font-weight: bold;
-        background-color: rgba(0, 0, 0, 0.05);
-    }
+        &:first-child {
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
 
-    #blue {
-        font-style: italic;
-        border: 2px solid blue;
-    }
+        &:nth-child(2) {
+            font-style: italic;
+            border: 2px solid blue;
+        }
 
-    #dotted {
-        text-decoration: line-through;
-        border: 3px dotted black;
-    }
+        &:nth-child(3) {
+            text-decoration: line-through;
+            border: 3px dotted black;
+        }
 
-    #dashed {
-        text-decoration: overline;
-        border: 3px gray dashed;
-    }
+        &:nth-child(4) {
+            text-decoration: overline;
+            border: 3px gray dashed;
+        }
 
-    #double {
-        text-decoration: underline;
-        border: 3px double gray;
-    }
+        &:nth-child(5) {
+            text-decoration: underline;
+            border: 3px double gray;
+        }
 
-    #colorful {
-        text-transform: uppercase;
-        border-width: 3px;
-        border-style: solid;
-        border-top-color: purple;
-        border-right-color: orange;
-        border-bottom-color: firebrick;
-        border-left-color: blue;
-    }
+        &:nth-child(6) {
+            text-transform: uppercase;
+            border: 3px solid;
+            border-color: purple orange firebrick blue;
+        }
 
-    #mixed {
-        background-color: rgba(0, 0, 0, 0.05);
-        border-width: 3px;
-        border-right-style: dotted;
-        border-right-color: purple;
-        border-bottom-style: double;
-        border-bottom-color: orange;
-        border-left-style: dashed;
-        border-left-color: firebrick;
+        &:last-child {
+            background-color: rgba(0, 0, 0, 0.05);
+            border-width: 5px 5px 10px;
+            border-style: none dotted double dashed;
+            border-color: transparent purple orange firebrick;
+        }
     }
 }
 
 #menu {
-    width: 7%;
+    width: 10%;
     font-style: italic;
     font-weight: bold;
     background-color: lightslategrey;
 
     div {
-        border-bottom-width: 1px;
-        border-bottom-style: solid;
-        border-bottom-color: black;
+        border-bottom: 2px solid black;
+        padding: 15px 0 15px 5px;
     }
 }
 
@@ -101,25 +91,25 @@
     div {
         width: 7%;
         margin: 20px 0;
-    }
 
-    #solid {
-        border: 3px solid goldenrod;
-    }
+        &:first-child {
+            border: 3px solid goldenrod;
+        }
 
-    #dotted {
-        border: 3px dotted goldenrod;
-        margin-left: 50px;
-    }
+        &:nth-child(2) {
+            border: 3px dotted goldenrod;
+            margin-left: 50px;
+        }
 
-    #dashed {
-        border: 3px dashed goldenrod;
-        margin-left: 100px;
-    }
+        &:nth-child(3) {
+            border: 3px dashed goldenrod;
+            margin-left: 100px;
+        }
 
-    #double {
-        border: 3px double goldenrod;
-        margin-left: 150px;
+        &:last-child {
+            border: 3px double goldenrod;
+            margin-left: 150px;
+        }
     }
 }
 
@@ -141,6 +131,8 @@ table {
 }
 
 #figures {
+    margin-bottom: 30px;
+
     div {
         display: inline-block;
         width: 200px;
@@ -148,82 +140,82 @@ table {
         margin: 10px 30px;
         background-color: sandybrown;
         border: 3px solid firebrick;
-    }
 
-    #first {
-        border-radius: 10px;
-    }
+        &:first-child {
+            border-radius: 10px;
+        }
 
-    #second {
-        border-radius: 25px 0;
-    }
+        &:nth-child(2) {
+            border-radius: 25px 0;
+        }
 
-    #third {
-        border-radius: 50% 50% 0 0;
-    }
+        &:nth-child(3) {
+            border-radius: 50% 50% 0 0;
+        }
 
-    #fourth {
-        border-radius: 90% 0 0;
-    }
+        &:nth-child(4) {
+            border-radius: 90% 0 0;
+        }
 
-    #fifth {
-        border-radius: 0 50%;
-    }
+        &:nth-child(5) {
+            border-radius: 0 50%;
+        }
 
-    #sixth {
-        border-radius: 0 90% 0 90%;
-    }
+        &:nth-child(6) {
+            border-radius: 0 90% 0 90%;
+        }
 
-    #seventh {
-        border-radius: 50% 50% 0;
-    }
+        &:nth-child(7) {
+            border-radius: 50% 50% 0;
+        }
 
-    #eighth {
-        border-radius: 100%;
+        &:last-child {
+            border-radius: 100%;
+        }
     }
 }
 
 #jumbotron {
     margin: auto auto 50px;
     width: 50%;
-    box-shadow: 10px 5px 50px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px 5px gray;
 
     #header {
         background-color: dodgerblue;
         color: white;
         padding-left: 10px;
-        line-height: 50px;
+        line-height: 60px;
     }
 
     p {
-        margin: 5px 0;
+        padding: 0 10px;
+        margin: 0 0 10px;
     }
 
     #footer {
         background-color: dodgerblue;
         color: white;
         padding-left: 10px;
-        line-height: 30px;
+        line-height: 45px;
     }
 }
 
 #card {
     width: 25%;
     margin: auto;
-    box-shadow: 10px 5px 50px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px 10px gray;
     border-radius: 5px;
 
-    #name {
-        padding: 10px 15px;
+    #card-title {
         font-weight: bold;
     }
 
     img {
-        margin: 0 0;
+        margin: 0;
         width: 100%;
     }
 
-    #position {
+    #position, #card-title {
         padding: 10px 15px;
     }
 }
