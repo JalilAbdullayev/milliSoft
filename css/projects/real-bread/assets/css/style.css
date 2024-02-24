@@ -26,28 +26,28 @@ body {
     width: 40%;
     margin: auto;
 
-    .p1 {
-        top: 250px;
-        left: 100px;
-    }
-
-    .p2 {
-        top: 350px;
-    }
-
-    .p3 {
-        top: 250px;
-        right: 390px;
-    }
-
-    .p4 {
-        top: 350px;
-        right: 100px;
-    }
-
     .people {
         position: absolute;
         display: inline-block;
+
+        &:first-child {
+            top: 250px;
+            left: 100px;
+        }
+
+        &:nth-child(2) {
+            top: 350px;
+        }
+
+        &:nth-child(3) {
+            top: 250px;
+            right: 390px;
+        }
+
+        &:last-child {
+            top: 350px;
+            right: 100px;
+        }
 
         img {
             width: 238px;
