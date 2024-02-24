@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+#head {
+    height: 494px;
+    background-color: #A79F94;
+    font: 800 1.5rem 'Raleway', sans-serif;
+    text-align: center;
+    color: #FFF;
+
+    h2 {
+        padding-top: 115px;
+    }
+}
+
+#staff {
+    width: 40%;
+    margin: auto;
+
+    .p1 {
+        top: 250px;
+        left: 100px;
+    }
+
+    .p2 {
+        top: 350px;
+    }
+
+    .p3 {
+        top: 250px;
+        right: 390px;
+    }
+
+    .p4 {
+        top: 350px;
+        right: 100px;
+    }
+
+    .people {
+        position: absolute;
+        display: inline-block;
+
+        img {
+            width: 238px;
+            height: 311px;
+            object-fit: cover;
+            border-radius: 25px;
+            border: 5px solid white;
+        }
+
+        h5 {
+            text-align: center;
+            line-height: 1.2;
+            font: 800 1.25rem 'Raleway', sans-serif;
+            color: #111;
+            margin-top: 30px;
+        }
+
+        p {
+            text-align: center;
+            font: 1rem 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #111;
+            margin-top: 10px;
+        }
+    }
+}
+
+#text {
+    height: 440px;
+    padding-top: 310px;
+    text-align: center;
+    line-height: 1.6;
+    color: #111;
+    letter-spacing: 0;
+    font: 1rem 'Open Sans', sans-serif;
+}
+
+footer {
+    color: #FFF;
+    background-color: #333;
+    text-align: center;
+    padding: 36px;
+    font: 0.8rem 'Open Sans', sans-serif;
+
+    a {
+        color: #ADCCE9;
+    }
+}
