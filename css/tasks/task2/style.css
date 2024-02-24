@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#first, #second, #third {
+    display: inline-block;
+    margin: 50px;
+    position: relative;
+}
+
+#first div, #second div, #third div {
+    margin: 15px auto;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    color: #FFF;
+
+
+    &:first-child {
+        background-color: gray;
+        position: absolute;
+    }
+
+    &:nth-child(2) {
+        background-color: pink;
+    }
+
+    &:nth-child(3) {
+        background-color: seagreen;
+    }
+
+    &:last-child {
+        background-color: orange;
+    }
+}
+
+#first div:first-child {
+    left: 50px;
+    top: -50px;
+}
+
+#second div:first-child {
+    left: 50px;
+    top: -50px;
+    z-index: -1;
+}
+
+#third div:first-child {
+    top: 50px;
+    left: -50px;
+}
