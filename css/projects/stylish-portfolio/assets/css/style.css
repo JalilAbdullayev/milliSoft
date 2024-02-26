@@ -197,17 +197,24 @@ header {
             margin: 0;
             background-color: #21252933;
             cursor: pointer;
+            clip-path: inset(0);
 
             &:hover {
+                clip-path: inset(8%);
                 transition: 1s;
-                background-color: #1D809F;
-                clip-path: inset(5%);
+
+                .text {
+                    transition: 1s;
+                    background-color: #1D809F;
+                    opacity: 0.8;
+                }
             }
 
             .text {
                 position: absolute;
+                padding: 11.5rem 5rem 5rem;
                 color: #FFF;
-                margin: 11.5rem 5rem 5rem;
+                background-color: transparent;
 
                 h2 {
                     text-align: left;
