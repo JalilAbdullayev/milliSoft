@@ -199,8 +199,9 @@ header {
         justify-content: space-between;
 
         p {
-            width: 44%;
+            width: 47%;
             font: 400 1.25rem 'Lato', sans-serif;
+            line-height: 1.5;
         }
     }
 
@@ -301,6 +302,7 @@ header {
             padding: 2rem 0;
             white-space: nowrap;
             color: #6C757D;
+            cursor: text;
         }
     }
 }
