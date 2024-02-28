@@ -141,7 +141,7 @@ header {
                     transition: 0.5s;
 
                     i {
-                        display: block;
+                        opacity: 1;
                         transition: 0.5s;
                     }
                 }
@@ -167,7 +167,7 @@ header {
                 background-color: transparent;
 
                 i {
-                    display: none;
+                    opacity: 0;
                 }
             }
         }

@@ -212,7 +212,7 @@
             }
         })
         $(window).scroll(function() {
-            if($(window).scrollTop() === 0) {
+            if($(this).scrollTop() === 0) {
                 $('nav').css({'padding': '1.5rem 84px', 'height': '104px', 'position': 'static'})
             } else {
                 $('nav').css({'padding': '0.5rem 84px', 'height': '72px', 'transition': '0.5s', 'position': 'fixed'})
