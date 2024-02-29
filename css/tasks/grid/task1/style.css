@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    display: grid;
+    width: 100%;
+    gap: 20px;
+    text-align: center;
+    grid-template-areas: "a b b"
+                         "a c d"
+                         "e e d";
+
+    div {
+        padding: 60px;
+
+        &#item1 {
+            grid-area: a;
+            background-color: coral;
+        }
+
+        &#item2 {
+            grid-area: b;
+            background-color: olivedrab;
+        }
+
+        &#item3 {
+            grid-area: c;
+            background-color: darkslategrey;
+        }
+
+        &#item4 {
+            grid-area: d;
+            background-color: orangered;
+        }
+
+        &#item5 {
+            grid-area: e;
+            background-color: darkolivegreen;
+        }
+    }
+}
