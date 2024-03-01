@@ -428,15 +428,11 @@
     $(document).ready(function() {
         $(window).scroll(function() {
             if($(this).scrollTop() === 0) {
-                $('nav').addClass('navbar')
-                $('nav').removeClass('navbar-shrink bg-dark')
-                $('nav img').addClass('nav-logo')
-                $('nav img').removeClass('nav-logo-shrink')
+                $('nav').addClass('navbar').removeClass('navbar-shrink bg-dark')
+                $('nav img').addClass('nav-logo').removeClass('nav-logo-shrink')
             } else {
-                $('nav').addClass('navbar-shrink bg-dark')
-                $('nav').removeClass('navbar')
-                $('nav img').addClass('nav-logo-shrink')
-                $('nav img').removeClass('nav-logo')
+                $('nav').addClass('navbar-shrink bg-dark').removeClass('navbar')
+                $('nav img').addClass('nav-logo-shrink').removeClass('nav-logo')
             }
         })
     })
