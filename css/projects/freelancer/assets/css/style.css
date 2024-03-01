@@ -6,30 +6,104 @@
     box-sizing: border-box;
 }
 
-nav {
+html {
+    scroll-behavior: smooth;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.t-none {
+    text-decoration: none;
+}
+
+.text-white {
+    color: #FFF;
+}
+
+.page-section {
+    padding: 6rem 0;
+}
+
+.navbar {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    height: 104px;
+    transition: 0.5s;
+}
+
+.nav-logo {
+    font-size: 1.75em;
+    transition: 0.5s;
+}
+
+.navbar-shrink {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    height: 72px;
+    transition: 0.5s;
+}
+
+.nav-logo-shrink {
+    font-size: 1.5em;
+    transition: 0.5s;
+}
+
+.d-flex {
     display: flex;
-    justify-content: space-between;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.ai-center {
     align-items: center;
+}
+
+.j-between {
+    justify-content: space-between;
+}
+
+.flex-row {
+    flex-flow: row wrap;
+}
+
+.flex-column {
+    flex-flow: column wrap;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+nav {
+    position: fixed;
     height: 72px;
     background-color: rgb(44, 62, 80);
-    width: 100%;
     z-index: 1;
+    padding-left: 118px;
+    padding-right: 118px;
 
     #head {
-        text-decoration: none;
-        font: 700 1.5em 'Montserrat', sans-serif;
-        color: #FFF;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
     }
 
     ul {
         list-style-type: none;
-        display: flex;
         width: 300px;
-        justify-content: space-between;
 
-        li a {
-            color: #FFF;
-            text-decoration: none;
+        a {
             font: 700 1rem 'Montserrat', sans-serif;
 
             &:hover {
@@ -42,45 +116,33 @@ nav {
 
 header {
     background-color: rgb(26, 188, 156);
-    padding: 6rem 0;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
 
     img {
         width: 15rem;
         margin-bottom: 3rem;
+        margin-top: 100px;
     }
 
     h1 {
         font: 700 4rem 'Montserrat', sans-serif;
-        color: #FFF;
         line-height: 3.5rem;
     }
 
     p {
-        color: #FFF;
         font: 400 1.5rem 'Lato', sans-serif;
     }
 }
 
 .star {
-    display: flex;
-    flex-flow: row wrap;
     width: 22%;
-    justify-content: space-between;
-    align-items: center;
     margin: 1.25rem auto 1.5rem;
 
     i {
         font-size: 2rem;
-        text-align: center;
     }
 
     hr {
         height: 0.25rem;
-        width: 100%;
         max-width: 7rem;
         border: none;
         border-radius: 1rem;
@@ -88,10 +150,6 @@ header {
 }
 
 .star-light {
-    i {
-        color: #FFF;
-    }
-
     hr {
         background-color: #FFF;
     }
@@ -108,9 +166,6 @@ header {
 }
 
 #portfolio {
-    text-align: center;
-    padding: 6rem 0;
-
     h2 {
         font: 700 3rem 'Montserrat', sans-serif;
         line-height: 2.5rem;
@@ -122,8 +177,6 @@ header {
     }
 
     #portfolios {
-        display: flex;
-        flex-flow: row wrap;
         justify-content: space-evenly;
 
         .portfolio {
@@ -148,22 +201,13 @@ header {
             }
 
             img {
-                width: 100%;
-                height: 100%;
                 border-radius: 0.5rem;
             }
 
             .bg {
                 position: absolute;
-                width: 100%;
-                height: 100%;
                 top: 0;
-                color: #FFF;
                 font-size: 4.5em;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
                 background-color: transparent;
 
                 i {
@@ -175,26 +219,17 @@ header {
 }
 
 #about {
-    color: #FFF;
     background-color: rgb(26, 188, 156);
-    display: flex;
-    justify-content: center;
-    flex-flow: column wrap;
     align-content: center;
-    padding: 6rem 0;
 
     h2 {
-        text-align: center;
         font: 700 3rem 'Montserrat', sans-serif;
         line-height: 2.5rem;
     }
 
     #text {
-        display: flex;
-        flex-flow: row wrap;
         margin: auto auto 1rem;
         width: 60%;
-        justify-content: space-between;
 
         p {
             width: 47%;
@@ -206,8 +241,6 @@ header {
     a {
         display: inline-block;
         font: 400 1.25rem 'Lato', sans-serif;
-        text-decoration: none;
-        color: #FFF;
         margin: 1.5rem auto auto;
         padding: 1rem 1.75rem;
         border: 0.125rem solid #F8F9FA;
@@ -222,13 +255,7 @@ header {
 }
 
 #contact {
-    padding: 6rem 0;
-    display: flex;
-    justify-content: center;
-    flex-flow: column wrap;
-
     h2 {
-        text-align: center;
         font: 700 3rem 'Montserrat', sans-serif;
         line-height: 2.5rem;
         color: rgb(44, 62, 88);
@@ -239,9 +266,8 @@ header {
         width: 50%;
         margin: auto;
 
-        input, textarea {
+        .form-control {
             display: block;
-            width: 100%;
             border-width: 0 0 0.125rem;
             border-bottom: solid #CED4DA;
             color: #212529;
@@ -267,7 +293,6 @@ header {
             padding: 1rem 1.75rem;
             font: 1.25rem 'Lato', sans-serif;
             border-radius: 0.5rem;
-            color: #FFF;
             cursor: pointer;
             line-height: 1.5;
             width: 15%;
@@ -285,7 +310,7 @@ header {
         }
 
         textarea {
-            height: 10rem;
+            height: 10rem !important;
             min-height: calc(1.5em + 1rem);
         }
 
@@ -295,8 +320,6 @@ header {
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
             padding: 2rem 0;
             white-space: nowrap;
             color: #6C757D;
@@ -308,11 +331,6 @@ header {
 footer {
     padding: 5rem 106px;
     background-color: #2C3E58;
-    color: #FFF;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-    text-align: center;
 
     div {
         width: 28%;
@@ -335,17 +353,9 @@ footer {
         }
 
         #social {
-            display: inline-flex;
-            flex-flow: row wrap;
-            width: 100%;
             justify-content: space-evenly;
 
             a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: #FFF;
-                text-decoration: none;
                 font-size: 1.25rem;
                 border: 0.125rem solid #F8F9FA;
                 border-radius: 50%;
@@ -365,8 +375,6 @@ footer {
 
 #copyright {
     background-color: #1A252F;
-    color: #FFF;
-    text-align: center !important;
     padding: 1.5rem 0;
     font: 400 1rem 'Lato', sans-serif;
     line-height: 1.5;

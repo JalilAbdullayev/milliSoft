@@ -11,100 +11,100 @@
     <link rel="stylesheet" href="./assets/css/style.css"/>
 </head>
 <body>
-<nav>
-    <a href="#" id="head">
+<nav class="navbar d-flex j-between ai-center w-100">
+    <a href="#" id="head" class="upper t-none text-white nav-logo">
         START BOOTSTRAP
     </a>
-    <ul>
+    <ul class="d-flex j-between">
         <li>
-            <a href="#portfolio">
+            <a href="#portfolio" class="upper t-none text-white">
                 PORTFOLIO
             </a>
         </li>
         <li>
-            <a href="#about">
+            <a href="#about" class="upper t-none text-white">
                 ABOUT
             </a>
         </li>
         <li>
-            <a href="#contact">
+            <a href="#contact" class="upper t-none text-white">
                 CONTACT
             </a>
         </li>
     </ul>
 </nav>
-<header>
+<header class="page-section d-flex flex-column j-center ai-center">
     <img src="./assets/image/header.svg" alt=""/>
-    <h1>
+    <h1 class="upper text-white">
         START BOOTSTRAP
     </h1>
-    <div class="star star-light">
-        <hr/>
-        <i class="fa-solid fa-star"></i>
-        <hr/>
+    <div class="star d-flex flex-row j-between ai-center star-light">
+        <hr class="w-100"/>
+        <i class="fa-solid fa-star text-center text-white"></i>
+        <hr class="w-100"/>
     </div>
-    <p>
+    <p class="text-white">
         Graphic Artist - Web Designer - Illustrator
     </p>
 </header>
-<section id="portfolio">
-    <h2>
+<section id="portfolio" class="page-section text-center">
+    <h2 class="upper">
         PORTFOLIO
     </h2>
-    <div class="star star-dark">
-        <hr/>
-        <i class="fa-solid fa-star"></i>
-        <hr/>
+    <div class="star d-flex flex-row j-between ai-center star-dark">
+        <hr class="w-100"/>
+        <i class="fa-solid fa-star text-center"></i>
+        <hr class="w-100"/>
     </div>
-    <div id="portfolios">
+    <div id="portfolios" class="d-flex flex-row">
         <div class="portfolio">
-            <img src="./assets/image/cabin.png" alt=""/>
-            <div class="bg">
+            <img class="w-100 h-100" src="./assets/image/cabin.png" alt=""/>
+            <div class="bg d-flex j-center ai-center text-white text-center w-100 h-100">
                 <i class="fa-solid fa-plus"></i>
             </div>
         </div>
         <div class="portfolio">
-            <img src="./assets/image/cake.png" alt=""/>
-            <div class="bg">
+            <img class="w-100 h-100" src="./assets/image/cake.png" alt=""/>
+            <div class="bg d-flex j-center ai-center text-white text-center w-100 h-100">
                 <i class="fa-solid fa-plus"></i>
             </div>
         </div>
         <div class="portfolio">
-            <img src="./assets/image/circus.png" alt=""/>
-            <div class="bg">
+            <img class="w-100 h-100" src="./assets/image/circus.png" alt=""/>
+            <div class="bg d-flex j-center ai-center text-white text-center w-100 h-100">
                 <i class="fa-solid fa-plus"></i>
             </div>
         </div>
         <div class="portfolio">
-            <img src="./assets/image/game.png" alt=""/>
-            <div class="bg">
+            <img class="w-100 h-100" src="./assets/image/game.png" alt=""/>
+            <div class="bg d-flex j-center ai-center text-white text-center w-100 h-100">
                 <i class="fa-solid fa-plus"></i>
             </div>
         </div>
         <div class="portfolio">
-            <img src="./assets/image/safe.png" alt=""/>
-            <div class="bg">
+            <img class="w-100 h-100" src="./assets/image/safe.png" alt=""/>
+            <div class="bg d-flex j-center ai-center text-white text-center w-100 h-100">
                 <i class="fa-solid fa-plus"></i>
             </div>
         </div>
         <div class="portfolio">
-            <img src="./assets/image/submarine.png" alt=""/>
-            <div class="bg">
+            <img class="w-100 h-100" src="./assets/image/submarine.png" alt=""/>
+            <div class="bg d-flex j-center ai-center text-white text-center w-100 h-100">
                 <i class="fa-solid fa-plus"></i>
             </div>
         </div>
     </div>
 </section>
-<section id="about">
-    <h2>
+<section id="about" class="page-section text-white d-flex flex-column j-center">
+    <h2 class="text-center upper">
         ABOUT
     </h2>
-    <div class="star star-light">
-        <hr/>
-        <i class="fa-solid fa-star"></i>
-        <hr/>
+    <div class="star d-flex flex-row j-between ai-center star-light">
+        <hr class="w-100"/>
+        <i class="fa-solid fa-star text-center text-white"></i>
+        <hr class="w-100"/>
     </div>
-    <div id="text">
+    <div id="text" class="d-flex flex-row j-between">
         <p>
             Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source
             files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.
@@ -114,52 +114,52 @@
             address to the contact form to make it fully functional!
         </p>
     </div>
-    <a href="#!">
+    <a href="#!" class="t-none text-white">
         <i class="fa-solid fa-download"></i> Free Download!
     </a>
 </section>
-<section id="contact">
-    <h2>
+<section id="contact" class="page-section d-flex flex-column j-center">
+    <h2 class="text-center upper">
         CONTACT ME
     </h2>
-    <div class="star star-dark">
-        <hr/>
-        <i class="fa-solid fa-star"></i>
-        <hr/>
+    <div class="star d-flex flex-row j-between ai-center star-dark">
+        <hr class="w-100"/>
+        <i class="fa-solid fa-star text-center"></i>
+        <hr class="w-100"/>
     </div>
     <form method="POST">
         <div class="input-group">
-            <input type="text" id="name" required/>
-            <label for="name">
+            <input type="text" id="name" class="form-control w-100" required/>
+            <label for="name" class="w-100 h-100">
                 Full Name
             </label>
         </div>
         <div class="input-group">
-            <input type="email" id="email" required/>
-            <label for="email">
+            <input type="email" id="email" class="form-control w-100" required/>
+            <label for="email" class="w-100 h-100">
                 Email address
             </label>
         </div>
         <div class="input-group">
-            <input type="tel" id="phone" required/>
-            <label for="phone">
+            <input type="tel" id="phone" class="form-control w-100" required/>
+            <label for="phone" class="w-100 h-100">
                 Phone number
             </label>
         </div>
         <div class="input-group">
-            <textarea cols="30" rows="10" id="message" required></textarea>
-            <label for="message">
+            <textarea cols="30" rows="10" id="message" class="form-control w-100" required></textarea>
+            <label for="message" class="w-100 h-100">
                 Message
             </label>
         </div>
         <div class="input-group">
-            <input type="submit" value="Send"/>
+            <input type="submit" value="Send" class="text-white"/>
         </div>
     </form>
 </section>
-<footer>
+<footer class="text-center text-white d-flex flex-row j-between">
     <div>
-        <h4>
+        <h4 class="upper">
             LOCATION
         </h4>
         <p>
@@ -167,26 +167,26 @@
         </p>
     </div>
     <div>
-        <h4>
+        <h4 class="upper">
             AROUND THE WEB
         </h4>
-        <div id="social">
-            <a href="#!">
+        <div id="social" class="d-flex flex-row w-100">
+            <a href="#!" class="d-flex t-none text-white j-center ai-center">
                 <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="#!">
+            <a href="#!" class="d-flex t-none text-white j-center ai-center">
                 <i class="fa-brands fa-twitter"></i>
             </a>
-            <a href="#!">
+            <a href="#!" class="d-flex t-none text-white j-center ai-center">
                 <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <a href="#!">
+            <a href="#!" class="d-flex t-none text-white j-center ai-center">
                 <i class="fa-brands fa-dribbble"></i>
             </a>
         </div>
     </div>
     <div>
-        <h4>
+        <h4 class="upper">
             ABOUT FREELANCER
         </h4>
         <p>
@@ -194,7 +194,7 @@
         </p>
     </div>
 </footer>
-<section id="copyright">
+<section id="copyright" class="text-center text-white">
     <small>
         Copyright © Your Website 2023
     </small>
@@ -213,9 +213,11 @@
         })
         $(window).scroll(function() {
             if($(this).scrollTop() === 0) {
-                $('nav').css({'padding': '1.5rem 84px', 'height': '104px', 'position': 'static'})
+                $('nav').addClass('navbar').removeClass('navbar-shrink')
+                $('nav #head').addClass('nav-logo').removeClass('nav-logo-shrink')
             } else {
-                $('nav').css({'padding': '0.5rem 84px', 'height': '72px', 'transition': '0.5s', 'position': 'fixed'})
+                $('nav').addClass('navbar-shrink').removeClass('navbar')
+                $('nav #head').addClass('nav-logo-shrink').removeClass('nav-logo')
             }
         })
     })
