@@ -183,7 +183,7 @@ nav {
 }
 
 header {
-    background-image: url('../image/header-bg.jpg');
+    background-image: url('imageader-bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -375,7 +375,7 @@ header {
 }
 
 #contact {
-    background-image: url("../image/map-image.png");
+    background-image: url("imagep-image.png");
     background-position: center;
     background-repeat: no-repeat;
 
