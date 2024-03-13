@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>
+        Cəlil Abdullayev
+    </title>
+    <style>
+        body {
+            font-family: 'Quicksand';
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        section {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+
+            .product {
+                width: 375px;
+                height: 375px;
+                position: relative;
+
+                &:hover {
+                    .hover {
+                        transition: .3s;
+                        opacity: 1;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .hover {
+                    width: 100%;
+                    top: 0;
+                    bottom: 0;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    flex-flow: column wrap;
+                    align-items: center;
+                    text-align: center;
+                    opacity: 0;
+                    background-color: rgba(40, 40, 40, .8);
+
+                    h3 {
+                        color: #FFF;
+                        font-size: 23px;
+                        font-weight: 400;
+                    }
+
+                    .tags {
+                        color: #C9A74D;
+                        font-size: 16px;
+
+                        a {
+                            color: #C9A74D;
+                        }
+                    }
+                }
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<table border="1">
+    <thead>
+    <tr>
+        <th>
+            Product
+        </th>
+        <th>
+            Flavors
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td rowspan="4">
+            Milk
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Almond
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Mango
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Chocolate
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            These are exclusive flavors
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        Item 1
+    </li>
+    <li>
+        Item 2
+        <ul>
+            <li>
+                Subitem 2.1
+            </li>
+            <li>
+                Subitem 2.2
+                <ul>
+                    <li>
+                        Sub-subitem 2.2.1
+                    </li>
+                    <li>
+                        Sub-subitem 2.2.2
+                        <ul>
+                            <li>
+                                Sub-sub-subitem 2.2.2.1
+                            </li>
+                            <li>
+                                Sub-sub-subitem 2.2.2.2
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Sub-subitem 2.2.3
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Subitem 2.3
+            </li>
+        </ul>
+    </li>
+    <li>
+        Item 3
+        <ul>
+            <li>
+                Subitem 3.1
+            </li>
+            <li>
+                Subitem 3.2
+            </li>
+        </ul>
+    </li>
+</ul>
+<section>
+    <div class="product">
+        <img src="exam1.jpg" alt=""/>
+        <div class="hover">
+            <h3>
+                Creamy Creations
+            </h3>
+            <div class="tags">
+                <a href="#">
+                    Chocolate
+                </a>
+                /
+                <a href="#">
+                    Golden
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <img src="exam2.jpg" alt=""/>
+        <div class="hover">
+            <h3>
+                Decorative Pumpkin
+            </h3>
+            <div class="tags">
+                <a href="#">
+                    Biscuits
+                </a>
+                /
+                <a href="#">
+                    Golden
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <img src="exam3.jpg" alt=""/>
+        <div class="hover">
+            <h3>
+                Gold Apple
+            </h3>
+            <div class="tags">
+                <a href="#">
+                    Biscuits
+                </a>
+                /
+                <a href="#">
+                    Golden
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <img src="exam4.jpg" alt=""/>
+        <div class="hover">
+            <h3>
+                The Perfect Dose
+            </h3>
+            <div class="tags">
+                <a href="#">
+                    Cookies
+                </a>
+                /
+                <a href="#">
+                    Golden
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <img src="exam5.jpg" alt=""/>
+        <div class="hover">
+            <h3>
+                The Best Flavor
+            </h3>
+            <div class="tags">
+                <a href="#">
+                    Cookies
+                </a>
+                /
+                <a href="#">
+                    Golden
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <img src="exam6.jpg" alt=""/>
+        <div class="hover">
+            <h3>
+                Keep It Tasty
+            </h3>
+            <div class="tags">
+                <a href="#">
+                    Cakes
+                </a>
+                /
+                <a href="#">
+                    Golden
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <img src="exam7.jpg" alt=""/>
+        <div class="hover">
+            <h3>
+                A Box Of Goodness
+            </h3>
+            <div class="tags">
+
+                <a href="#">
+                    Biscuits
+                </a>
+                /
+                <a href="#">
+                    Golden
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <img src="exam8.jpg" alt=""/>
+        <div class="hover">
+            <h3>
+                Chocolate
+            </h3>
+            <div class="tags">
+
+                <a href="#">
+                    Chocolate
+                </a>
+                /
+                <a href="#">
+                    Golden
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

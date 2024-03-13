@@ -22,31 +22,31 @@
         position: absolute;
 
         &#one {
-            bottom: 200px;
+            bottom: 100px;
             left: 620px;
             opacity: 0;
-            animation: smokeOne 6s 1s linear infinite;
+            animation: smoke 6s 1s linear infinite;
         }
 
         &#two {
-            bottom: 200px;
+            bottom: 100px;
             left: 630px;
             opacity: 0;
-            animation: smokeOne 6s 2s linear infinite;
+            animation: smoke 6s 2s linear infinite;
         }
 
         &#three {
-            bottom: 200px;
+            bottom: 100px;
             left: 620px;
             opacity: 0;
-            animation: smokeOne 6s 3s linear infinite;
+            animation: smoke 6s 3s linear infinite;
         }
 
         &#four {
-            bottom: 200px;
+            bottom: 100px;
             left: 630px;
             opacity: 0;
-            animation: smokeOne 6s 4s linear infinite;
+            animation: smoke 6s 4s linear infinite;
         }
     }
 
@@ -56,11 +56,16 @@
     }
 }
 
-@keyframes smokeOne {
+@keyframes smoke {
     0% {
-        bottom: 200px;
+        bottom: 100px;
         opacity: 0;
         transform: scale(0);
+    }
+    20% {
+        bottom: 200px;
+        opacity: .25;
+        transform: scale(100%);
     }
     40% {
         bottom: 300px;
@@ -69,7 +74,7 @@
     }
     80% {
         bottom: 400px;
-        opacity: .3;
+        opacity: .25;
         transform: scale(150%);
     }
     100% {
