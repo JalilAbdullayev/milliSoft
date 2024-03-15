@@ -4,5 +4,5 @@ var y = Number(prompt("Y"));
 x == y;
 y == x;
 
-alert("Y: " + x);
-alert("X: " + y);
+document.write("X: " + y + "<br/>");
+document.write("Y: " + x);
