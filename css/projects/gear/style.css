@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #active {
     font-weight: 500;
 }
@@ -52,10 +56,13 @@ header {
             background-color: #0086D6;
         }
 
-        i {
+        #hamburger {
             display: none;
             color: #FFF;
             font-size: 25px;
+            background-color: transparent;
+            border: none;
+            outline: none;
         }
     }
 
@@ -224,6 +231,10 @@ header {
             &:hover {
                 box-shadow: 0 32px 56px 0 rgba(0, 0, 0, 0.0784313725);
                 transition: 0.3s;
+            }
+
+            img {
+                width: 100%;
             }
 
             .tool-head {
@@ -563,17 +574,14 @@ footer {
         }
 
         input[type=email] {
+            font: 400 14px Poppins;
+            line-height: 20px;
+            letter-spacing: 0.200000003px;
             width: 282px;
             height: 42px;
             border-radius: 4px;
             outline: none;
             border: none;
-        }
-
-        input[type=email]::placeholder {
-            font: 400 14px Poppins;
-            line-height: 20px;
-            letter-spacing: 0.200000003px;
             padding-left: 10px;
         }
 
@@ -659,7 +667,7 @@ footer {
 
 @media screen and (min-width: 400px) and (max-width: 480px) {
     .newtool {
-        width: 94%;
+        width: 94% !important;
     }
 
     #subscribe form {
@@ -670,7 +678,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     header {
         height: 1050px;
 
@@ -682,7 +690,7 @@ footer {
                 display: none;
             }
 
-            i {
+            #hamburger {
                 display: block;
             }
         }
@@ -773,7 +781,6 @@ footer {
             width: 78%;
             height: 364px;
             margin: auto;
-            align-content: center;
             align-items: center;
             gap: 20px;
 
@@ -824,8 +831,8 @@ footer {
     }
 }
 
-@media screen and (max-width: 1024px) {
-    header nav i {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    header nav #hamburger {
         display: none;
     }
 
@@ -834,14 +841,14 @@ footer {
     }
 
     #newcomer #newtools {
-        flex-flow: column wrap;
-        gap: 40px;
+        flex-flow: row wrap;
+        gap: 20px;
 
         .newtool {
             flex-direction: column;
             width: 45%;
+            height: 400px;
             margin: auto;
-            align-content: center;
             align-items: center;
             gap: 20px;
 
