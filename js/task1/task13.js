@@ -8,7 +8,6 @@ for(var i = 2; i <= 100; i++) {
             bolen++;
         }
     }
-
     if(bolen == 2) {
         // Əgər sadəcə 2 ədəd bölən (1 və özü) varsa sadədir.
         sade += i + "<br/>";
