@@ -1,3 +1,3 @@
-var uni = "ADNA universiteti."
-var newUni = uni.replace('ADNA', 'ADNSU')
+var uni = "ADNA universiteti. ADNA."
+var newUni = uni.replaceAll('ADNA', 'ADNSU')
 console.log(newUni)

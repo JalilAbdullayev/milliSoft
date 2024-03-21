@@ -4,6 +4,7 @@ function integer(arr) {
     var arr1 = []
     for(var i = 0; i < arr.length; i++) {
         if(typeof arr[i] === 'number') {
+            //Ancaq tipi number olanlar götürülsün
             arr1.push(arr[i])
         }
     }
