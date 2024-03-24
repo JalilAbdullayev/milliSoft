@@ -1,11 +1,5 @@
-function salary(salaryPerHour, hoursPerDay, daysPerWeek) {
-    var salaryPerWeek = salaryPerHour * hoursPerDay;
-    var hoursPerWeek = daysPerWeek * hoursPerDay;
-    var averageHoursPerWeek = 40;
-    if(hoursPerWeek > averageHoursPerWeek) {
-        salaryPerWeek *= 2
-    }
-    var daysPerMonth = daysPerWeek * 4;
-    return salaryPerWeek * daysPerMonth
-}
-console.log(salary(8, 9, 5))
+var num = 123
+//Stringə çevirmək
+var num1 = num.toString().split('').join('')
+//Hər bir indexi ayrı toplamaq
+console.log(Number(num1[0]) + Number(num1[1]) + Number(num1[2]))

@@ -1,5 +1,3 @@
-var arr = 'Lorem ipsum ipsum dolor sit amet amet consectetur adipiscing elit.';
-
-var unique = [...new Set(arr.split(" "))].join(" ");
-
-console.log(unique);
+var uni = "ADNA universiteti. ADNA."
+var newUni = uni.replaceAll('ADNA', 'ADNSU')
+console.log(newUni)

@@ -1,5 +1,5 @@
-var text = 'lorem ipsum dolor sit amet, consectetur adipisicing elit. ab, accusamus? lorem ipsum dolor sit amet,' +
-    ' consectetur adipisicing elit. ab, accusamus?';
+var text = 'lorem ipsum dolor sit amet, consectetur adipisicing elit. ab, accusamus. lorem ipsum dolor sit amet,' +
+    ' consectetur adipisicing elit. ab, accusamus.';
 
 function capitalize(text) {
     var arr = text.split(". ");
