@@ -1,45 +1,40 @@
 var num = Number(prompt('Ədəd daxil edin:'));
 
-var word = ['bir', 'iki', 'üç', 'dörd', 'beş', 'altı', 'yeddi', 'səkkiz', 'doqquz', 'on'];
+function ededSoz(num) {
+    var bir = ['', 'bir', 'iki', 'üç', 'dörd', 'beş', 'altı', 'yeddi', 'səkkiz', 'doqquz'];
+    var on = ['', 'on', 'iyirmi', 'otuz', 'qırx', 'əlli', 'altmış', 'yetmiş', 'səksən', 'doxsan'];
+    var yuz = ['', 'Yüz', 'İki yüz', 'Üç yüz', 'Dörd yüz', 'Beş yüz', 'Altı yüz', 'Yeddi yüz', 'Səkkiz yüz', 'Doqquz' +
+    ' yüz'];
 
+    var eded = '';
 
-// if(num > 0 && num <= 10) {
-//     alert(word[num - 1]);
-// } else {
-//     alert('1-dən 10-adək ədəd daxil edin.');
-// }
+    if(num === 0) {
+        return 'sıfır';
+    }
+    if(num >= 100) {
+        eded += yuz[Math.floor(num / 100)] + ' ';
+        num %= 100;
+    }
 
-switch(num) {
-    case 1:
-        alert('bir');
-        break;
-    case 2:
-        alert('iki');
-        break;
-    case 3:
-        alert('üç');
-        break;
-    case 4:
-        alert('dörd');
-        break;
-    case 5:
-        alert('beş');
-        break;
-    case 6:
-        alert('altı');
-        break;
-    case 7:
-        alert('yeddi');
-        break;
-    case 8:
-        alert('səkkiz');
-        break;
-    case 9:
-        alert('doqquz');
-        break;
-    case 10:
-        alert('on');
-        break;
-    default:
-        alert('1-dən 10-adək ədəd daxil edin.');
+    if(num >= 10) {
+        eded += on[Math.floor(num / 10)] + ' ';
+        num %= 10;
+    }
+
+    if(num >= 10 && num <= 19) {
+        eded += bir[num] + ' ';
+        return eded.trim();
+    }
+
+    if(num >= 1) {
+        eded += bir[num];
+    }
+
+    return eded.trim();
+}
+
+if(num >= 1 && num <= 1000) {
+    alert(ededSoz(num));
+} else {
+    alert('1-dən 1000-ədək ədəd daxil edin.');
 }
