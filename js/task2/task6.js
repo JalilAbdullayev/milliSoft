@@ -3,16 +3,16 @@ var num = Number(prompt('Ədəd daxil edin:'));
 function ededSoz(num) {
     var bir = ['', 'bir', 'iki', 'üç', 'dörd', 'beş', 'altı', 'yeddi', 'səkkiz', 'doqquz'];
     var on = ['', 'on', 'iyirmi', 'otuz', 'qırx', 'əlli', 'altmış', 'yetmiş', 'səksən', 'doxsan'];
-    var yuz = ['', 'Yüz', 'İki yüz', 'Üç yüz', 'Dörd yüz', 'Beş yüz', 'Altı yüz', 'Yeddi yüz', 'Səkkiz yüz', 'Doqquz' +
-    ' yüz'];
+    var yuz = "yüz";
 
     var eded = '';
 
     if(num === 0) {
         return 'sıfır';
     }
+
     if(num >= 100) {
-        eded += yuz[Math.floor(num / 100)] + ' ';
+        eded += bir[Math.floor(num / 100)] + ' ' + yuz + ' ';
         num %= 100;
     }
 
