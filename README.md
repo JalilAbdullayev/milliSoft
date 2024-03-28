@@ -1,3 +1,10 @@
+<style>
+a {
+  text-decoration: none;
+  color: #C5D1DE;
+}
+</style>
+
 # milliSoft
 
 1. [HTML](https://github.com/JalilAbdullayev/milliSoft/tree/main/html)
