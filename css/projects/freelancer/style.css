@@ -177,6 +177,8 @@ header {
     }
 
     #portfolios {
+        max-width: 1200px;
+        margin: auto;
         justify-content: space-evenly;
 
         .portfolio {

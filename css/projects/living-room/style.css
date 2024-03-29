@@ -15,7 +15,7 @@ body {
 
         div {
             margin-top: 240px;
-            margin-left: 85px;
+            margin-left: 184px;
             width: 732px;
             min-height: 391px;
             height: auto;
@@ -68,7 +68,7 @@ body {
             margin: 60px 0 0 auto;
             position: absolute;
             bottom: -119px;
-            right: 84px;
+            right: 192px;
             z-index: -1;
             object-fit: cover;
         }
