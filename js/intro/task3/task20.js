@@ -1,11 +1,12 @@
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-var arr1 = [];
-for(var i = 0; i < arr.length; i++) {
-    if(arr[i] != 3) {
-        //3-ü arraydən çıxarır.
-        arr1.push(arr[i]);
+function indexOf(arr, value) {
+    for(var i = 0; i < arr.length; i++) {
+        if(arr[i] == value) {
+            return i;
+        }
     }
+    return -1;
 }
 
-document.write(arr1);
+document.write(indexOf(arr, 5));
