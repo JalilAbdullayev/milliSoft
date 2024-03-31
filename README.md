@@ -38,10 +38,20 @@
 
 3. [JavaScript](https://github.com/JalilAbdullayev/milliSoft/tree/main/js)
 
-- [Task 1](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/task1)
-- [Task 2](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/task2)
-- [Task 3](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/task3)
-- [Task 4](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/task4)
+- [Intro](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/intro)
+
+* [Task 1](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/intro/task1)
+* [Task 2](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/intro/task2)
+* [Task 3](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/intro/task3)
+* [Task 4](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/intro/task4)
+
+- [DOM](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM)
+
+* [Task 1](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task1)
+* [Task 2](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2)
+* [Task 3](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task3)
+* [Task 4](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task4)
+* [Task 11](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task11)
 
 4. [Exam](https://github.com/JalilAbdullayev/milliSoft/tree/main/exam)
 
