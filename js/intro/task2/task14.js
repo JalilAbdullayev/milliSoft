@@ -1,11 +1,14 @@
 function salary(salaryPerHour, hoursPerDay, daysPerWeek) {
-    var salaryPerWeek = salaryPerHour * hoursPerDay;
     var hoursPerWeek = daysPerWeek * hoursPerDay;
     var averageHoursPerWeek = 40;
+    var baseSalaryPerWeek = salaryPerHour * averageHoursPerWeek;
+    var overTimeSalaryPerWeek = 0;
     if(hoursPerWeek > averageHoursPerWeek) {
-        salaryPerWeek *= 2
+        overTimeSalaryPerWeek = salaryPerHour * 2 * (hoursPerWeek - averageHoursPerWeek);
     }
+    var totalSalaryPerWeek = baseSalaryPerWeek + overTimeSalaryPerWeek;
     var daysPerMonth = daysPerWeek * 4;
-    return salaryPerWeek * daysPerMonth
+    return totalSalaryPerWeek * daysPerMonth
 }
+
 console.log(salary(8, 9, 5))
