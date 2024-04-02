@@ -1,10 +1,17 @@
-var date1 = new Date();
+var date1 = new Date(2013, 9, 26);
 
 var date2 = new Date(2024, 11, 25)
 
-var month = Math.abs(date2.getMonth() - date1.getMonth());
-var day = Math.abs(date2.getDate() - date1.getDate());
-var hour = Math.abs(date2.getHours() - date1.getHours());
-var minute = Math.abs(date2.getMinutes() - date1.getMinutes());
-var second = Math.abs(date2.getSeconds() - date1.getSeconds());
-document.write(month + " ay " + day + " gün " + hour + " saat " + minute + " dəqiqə " + second)
+var year = date2.getFullYear() - date1.getFullYear();
+var month = date2.getMonth() - date1.getMonth();
+if(month < 0) {
+    year--
+    month += 12
+}
+var day = date2.getDate() - date1.getDate();
+if(day < 0) {
+    month--
+    date2.setDate(0)
+    day += date2.getDate()
+}
+document.write(year + " il " + month + " ay " + day + " gün")

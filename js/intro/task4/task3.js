@@ -1,24 +1,31 @@
-var students = {
-    student1: {
+var students = [
+    {
         name: "John",
-        exam: true
+        enter: 42,
+        exit: 16
     },
-    student2: {
+    {
         name: "Jane",
-        exam: false
+        enter: 45,
+        exit: 45
     },
-    student3: {
+    {
         name: "Joe",
-        exam: true
+        enter: 45,
+        exit: 17
     },
-    student4: {
+    {
         name: "Jack",
-        exam: false
+        enter: 45,
+        exit: 45
+    }
+]
+
+for(let i = 0; i <= students.length - 1; i++) {
+    if(students[i].enter + students[i].exit < 51 || students[i].exit <= 17) {
+        students.splice(i, 1)
+        i--
     }
 }
 
-function removeFailedStudents(students) {
-    return Object.keys(students).filter((key) => students[key].exam)
-}
-
-console.log(removeFailedStudents(students))
+console.log(students)
