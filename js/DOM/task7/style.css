@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.ma {
+    margin: auto;
+}
+
+.text-none {
+    text-decoration: none;
+}
+
+.text-muted {
+    color: #7B8E9D;
+}
+
+.text-dark {
+    color: #112433;
+}
+
+#products {
+    position: relative;
+
+    #shape1 {
+        position: absolute;
+        left: 0;
+    }
+
+    #shape2 {
+        position: absolute;
+        right: 0;
+    }
+
+    #shape3 {
+        position: absolute;
+        left: 70px;
+        top: 430px;
+    }
+
+    #shape4 {
+        position: absolute;
+        right: 80px;
+        top: 510px;
+    }
+
+    #shape5 {
+        position: absolute;
+        left: 620px;
+        top: 180px;
+    }
+
+    h1 {
+        font: 500 60px 'Rubik', sans-serif;
+        line-height: 1;
+        margin-bottom: 102px;
+    }
+
+    #filter {
+        margin-bottom: 105px;
+
+        h4 {
+            font: 500 18px 'Rubik', sans-serif;
+            padding: 0 28px;
+            position: relative;
+            cursor: pointer;
+
+            &:after {
+                content: '';
+                background-image: url("image/wave.png");
+                display: block;
+                width: 76px;
+                height: 6px;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: auto;
+                text-align: center;
+                position: absolute;
+                bottom: -15px;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+
+    .product-grid {
+        justify-content: space-evenly;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+
+        &#vegetables, &#driedFruits, &#driedVegetables {
+            display: none;
+        }
+
+        div {
+            width: 268px;
+            height: 268px;
+            border: 1px solid #E9E9E9;
+            position: relative;
+
+            &:hover {
+                .bg {
+                    transition: .3s;
+                    opacity: 1;
+                }
+            }
+
+            a {
+                font: 400 18px 'Rubik', sans-serif;
+
+                &:hover {
+                    color: #FAB522;
+                    transition: .3s;
+                }
+            }
+
+            img {
+                width: 100%;
+                margin-bottom: 25px;
+            }
+
+            .bg {
+                border: 0;
+                position: absolute;
+                top: 0;
+                background-color: rgba(64, 136, 88, 0.7);
+                opacity: 0;
+
+                a {
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: #FFF;
+                    border-radius: 50%;
+                    font-size: 13px;
+                    line-height: 41px;
+                    color: #408858;
+
+                    &:hover {
+                        transition: .3s;
+                        color: #FFF;
+                        background-color: #FE6B51;
+                    }
+                }
+            }
+        }
+    }
+}
