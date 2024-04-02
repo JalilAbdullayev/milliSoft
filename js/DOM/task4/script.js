@@ -1,14 +1,16 @@
-let currentWidth = document.querySelector('div').offsetWidth;
-let currentHeight = document.querySelector('div').offsetHeight;
-let currenBorderWidth = parseFloat(getComputedStyle(document.querySelector('div')).getPropertyValue('border-width'));
+let div = document.querySelector('div');
 
-function changeSize() {
+let currentWidth = div.offsetWidth;
+let currentHeight = div.offsetHeight;
+let currenBorderWidth = parseFloat(getComputedStyle(div).getPropertyValue('border-width'));
+
+window.addEventListener('change', () => {
     let width = document.getElementById('width').value;
-    document.querySelector('div').style.width = currentWidth + +width + 'px';
+    div.style.width = currentWidth + +width + 'px';
 
     let height = document.getElementById('height').value;
-    document.querySelector('div').style.height = currentHeight + +height + 'px';
+    div.style.height = currentHeight + +height + 'px';
 
     let borderWidth = parseFloat(document.getElementById('borderWidth').value);
-    document.querySelector('div').style.borderWidth = currenBorderWidth + borderWidth + 'px';
-}
+    div.style.borderWidth = currenBorderWidth + borderWidth + 'px';
+});
