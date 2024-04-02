@@ -51,6 +51,9 @@
 * [Task 2](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2)
 * [Task 3](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task3)
 * [Task 4](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task4)
+* [Task 5](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task5)
+* [Task 7](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task7)
+* [Task 8](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task8)
 * [Task 11](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task11)
 
 4. [Exam](https://github.com/JalilAbdullayev/milliSoft/tree/main/exam)
