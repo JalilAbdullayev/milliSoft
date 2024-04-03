@@ -8,6 +8,7 @@ nav.transition = '.3s';
 function offsetMenuOpen() {
     offsetMenu.left = '0';
     nav.width = '265px';
+    navList.opacity = '0';
     offsetMenu.opacity = '1';
     nav.backgroundColor = '#061647';
     navList.alignItems = 'flex-end';
@@ -16,6 +17,7 @@ function offsetMenuOpen() {
 function offsetMenuClose() {
     offsetMenu.left = '-265px';
     nav.width = '75px';
+    navList.opacity = '1';
     offsetMenu.opacity = '0';
     nav.backgroundColor = '#5C6784';
     navList.alignItems = 'center';

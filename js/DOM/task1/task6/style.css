@@ -31,7 +31,7 @@ nav {
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    width: auto;
+    width: 75px;
     transition: width 0.3s ease-out, left 0.3s ease-out, opacity 0.3s ease-out, background-color 0.3s ease-out;
 
     #nav {

@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h3 {
+    text-align: right;
+    padding: 5px;
+}
+
+p {
+    font-style: italic;
+    padding: 5px;
+}
+
+button {
+    width: 100px;
+    height: 25px;
+}
