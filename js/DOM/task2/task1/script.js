@@ -28,19 +28,23 @@ let p = document.createElement('p');
 let h3 = document.createElement('h3');
 
 let button = document.createElement('button');
-button.innerHTML = 'Change';
+let buttonText = document.createTextNode('Change');
+button.appendChild(buttonText);
 document.body.appendChild(button);
 
-button.addEventListener('click', () => {
+function quote() {
     let random = Math.floor(Math.random() * quotes.length);
 
-    p.innerHTML = '';
-    let quote = document.createTextNode(quotes[random].quote);
+    while (p.firstChild) p.removeChild(p.firstChild);
+    let quote = document.createTextNode('"' + quotes[random].quote + '"');
     p.appendChild(quote);
     document.querySelector('div').appendChild(p);
 
-    h3.innerHTML = '';
+    while (h3.firstChild) h3.removeChild(h3.firstChild);
     let author = document.createTextNode(quotes[random].author);
     h3.appendChild(author);
     document.querySelector('div').appendChild(h3);
-})
+}
+
+document.addEventListener('DOMContentLoaded', quote);
+button.addEventListener('click', quote);

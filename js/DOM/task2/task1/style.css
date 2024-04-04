@@ -11,19 +11,31 @@ body {
     align-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #949494;
 }
 
-h3 {
-    text-align: right;
-    padding: 5px;
+#container {
+    width: 550px;
+    height: 220px;
+    background-color: #05BDFF;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
 }
 
-p {
+h3, p {
+    color: #FFF;
+    padding: 10px;
     font-style: italic;
-    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
     width: 100px;
-    height: 25px;
+    height: 45px;
+    background-color: #007516;
+    color: #FFF;
+    border: none;
+    outline: none;
+    margin: 10px;
 }
