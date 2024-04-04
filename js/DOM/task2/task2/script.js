@@ -13,7 +13,7 @@ add.addEventListener("click", function() {
         deleteButton.className = "delete";
 
         let icon = document.createElement("i");
-        icon.className = "fas fa-trash";
+        icon.className = "fas fa-trash-can";
         deleteButton.appendChild(icon);
 
         li.appendChild(deleteButton);
