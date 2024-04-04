@@ -1,15 +1,47 @@
+let input = document.querySelector('input');
+
 function insert(value) {
-    document.querySelector('input').value += value;
+    input.value += value;
 }
 
 function equal() {
-    document.querySelector('input').value = eval(document.querySelector('input').value);
+    if(input.value !== "") {
+        let numbers = [];
+        let operators = [];
+
+        let currentNum = "";
+        for(let i = 0; i < input.value.length; i++) {
+            if(input.value[i] === "/" || input.value[i] === "*" || input.value[i] === "+" || input.value[i] === "-") {
+                numbers.push(Number(currentNum));
+                currentNum = "";
+                operators.push(input.value[i]);
+            } else {
+                currentNum += input.value[i];
+            }
+        }
+        numbers.push(Number(currentNum));
+
+        let result = numbers[0];
+        for(let i = 0; i < operators.length; i++) {
+            if(operators[i] === "+") {
+                result += numbers[i + 1];
+            } else if(operators[i] === "-") {
+                result -= numbers[i + 1];
+            } else if(operators[i] === "*") {
+                result *= numbers[i + 1];
+            } else if(operators[i] === "/") {
+                result /= numbers[i + 1];
+            }
+        }
+
+        input.value = result;
+    }
 }
 
 function clean() {
-    document.querySelector('input').value = '';
+    input.value = '';
 }
 
 function backspace() {
-    document.querySelector('input').value = document.querySelector('input').value.slice(0, -1);
+    input.value = input.value.slice(0, -1);
 }
