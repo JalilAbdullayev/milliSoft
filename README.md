@@ -68,6 +68,7 @@
   + [5. Filter](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/5-filter)
   + [6. Volume](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/6-volume)
   + [7. Gallery](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/7-gallery)
+  + [8. Pagination](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/8-pagination)
 
 4. [Exam](https://github.com/JalilAbdullayev/milliSoft/tree/main/exam)
 
