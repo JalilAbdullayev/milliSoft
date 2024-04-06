@@ -1,5 +1,5 @@
 let input = document.querySelector("input");
-let sound = document.querySelector("h3");
+let volume = document.querySelector("h3");
 let lower = document.querySelector("#lower");
 let higher = document.querySelector("#higher");
 
@@ -8,7 +8,7 @@ function updateValue() {
     input.style.background = 'linear-gradient(to right, #FFBE13 0%, #FFBE13 ' + value + '%, #fff ' + value + '%, white' +
         ' 100%)';
     if(input.value != 0) {
-        sound.innerText = input.value + '%';
+        volume.innerText = input.value + '%';
     }
 }
 
