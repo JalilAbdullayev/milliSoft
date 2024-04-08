@@ -69,6 +69,7 @@
   + [Volume](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/6-volume)
   + [Gallery](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/7-gallery)
   + [Pagination](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/8-pagination)
+  + [Table](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/9-table)
 
 4. [Exam](https://github.com/JalilAbdullayev/milliSoft/tree/main/exam)
 
