@@ -4,7 +4,7 @@ let currentWidth = div.offsetWidth;
 let currentHeight = div.offsetHeight;
 let currenBorderWidth = parseFloat(getComputedStyle(div).getPropertyValue('border-width'));
 
-window.addEventListener('change', () => {
+window.addEventListener('input', () => {
     let width = document.getElementById('width').value;
     div.style.width = currentWidth + +width + 'px';
 
