@@ -17,14 +17,14 @@ for(let i = 1; i <= 50; i++) {
 let data = document.querySelectorAll('li');
 let countPages = Math.ceil(data.length / limit);
 
-function disableButton(a) {
-    a.style.display = "none";
-    a.setAttribute("disabled", true);
+function disableButton(button) {
+    button.style.cursor = "not-allowed";
+    button.setAttribute("disabled", true);
 }
 
-function enableButton(a) {
-    a.style.display = "block";
-    a.removeAttribute("disabled");
+function enableButton(button) {
+    button.style.cursor = "pointer";
+    button.removeAttribute("disabled");
 }
 
 function currentPage(pageNum) {
@@ -33,7 +33,7 @@ function currentPage(pageNum) {
     document.querySelectorAll(".page").forEach((a) => {
         a.classList.remove("active");
         let pageIndex = Number(a.getAttribute("page-index"));
-        if(pageIndex == current) {
+        if(pageIndex === current) {
             a.classList.add("active");
         }
     });
