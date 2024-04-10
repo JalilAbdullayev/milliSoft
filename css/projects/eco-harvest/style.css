@@ -387,7 +387,7 @@ header {
     #whyshape {
         position: absolute;
         top: 0;
-        left: 100%;
+        left: 92%;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
