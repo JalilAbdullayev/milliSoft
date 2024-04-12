@@ -71,6 +71,7 @@
   + [Pagination](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/8-pagination)
   + [Table](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/9-table)
   + [Grades](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/10-grades)
+  + [Works](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/11-works)
 
 4. [Exam](https://github.com/JalilAbdullayev/milliSoft/tree/main/exam)
 
