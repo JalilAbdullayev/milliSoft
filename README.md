@@ -72,6 +72,7 @@
   + [Table](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/9-table)
   + [Grades](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/10-grades)
   + [Works](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/11-works)
+  + [Cart](https://github.com/JalilAbdullayev/milliSoft/tree/main/js/DOM/task2/13-cart)
 
 4. [Exam](https://github.com/JalilAbdullayev/milliSoft/tree/main/exam)
 
