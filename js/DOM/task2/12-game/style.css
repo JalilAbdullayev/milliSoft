@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    width: 1025px;
+    height: 122px;
+    background-color: #4A7BFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 10px;
+    box-shadow: black 0 0 10px;
+
+    button {
+        padding: 15px;
+        border: none;
+    }
+}
