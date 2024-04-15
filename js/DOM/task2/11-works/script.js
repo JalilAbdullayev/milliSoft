@@ -6,7 +6,6 @@ let close = document.querySelector('#close');
 let table = document.querySelector('table');
 let thead = document.querySelector('thead');
 let tbody = document.querySelector('tbody');
-let tam = 10;
 
 modalButtons.innerHTML += `<button class="modal-button green" onclick="changeGrade(1)">Tam</button>
 <button class="modal-button yellow" onclick="changeGrade(0.5)">Natamam</button>
@@ -31,7 +30,7 @@ submit.addEventListener("click", function() {
                             <th>No</th>
                             <th>SAA</th>`
     for(let i = 1; i <= input.value; i++) {
-        theadIn += `<th>Is No ${i}</th>`
+        theadIn += `<th>İş No ${i}</th>`
     }
     theadIn += `<th>Nəticə</th>
 </tr>`;
@@ -52,8 +51,8 @@ submit.addEventListener("click", function() {
                         </button>
                     </td>`
         }
-        tbodyIn += `<td>${person.result}</td>`
 
+        tbodyIn += `<td>${person.result}</td>`;
         tbody.innerHTML += tbodyIn;
     })
     table.style.display = "table";
@@ -75,14 +74,16 @@ function changeGrade(i) {
     let trLastChild = tr.lastElementChild;
 
     let color = i === 0 ? 'red' : i === 0.5 ? 'yellow' : 'green';
-    let text = i === 0 ? '0' : i === 0.5 ? 'Natamam' : 'Tam';
+    let text = i === 0 ? 0 : i === 0.5 ? 'Natamam' : 'Tam';
 
     gradeButton.className = `td-button ${color}`;
     gradeButton.textContent = text;
     gradeButton.disabled = true;
     gradeButton.removeAttribute('onClick');
-    let kesr = tam / input.value;
+
+    let kesr = 10 / input.value;
     let currentPerson = people[modal.className];
+
     if(i === 1) {
         currentPerson.result += kesr;
     } else if(i === 0.5) {
@@ -90,8 +91,7 @@ function changeGrade(i) {
     } else {
         currentPerson.result += 0;
     }
+
     trLastChild.textContent = currentPerson.result;
-
-
     modal.style.display = 'none';
 }
