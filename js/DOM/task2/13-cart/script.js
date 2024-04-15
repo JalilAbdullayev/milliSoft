@@ -7,29 +7,22 @@ let tbody = document.querySelector("table tbody");
 let close = document.querySelector("#close");
 let total = document.querySelector("#total");
 
-let products = [
-    {
-        id: 1,
-        name: "Orange",
-        image: 'image/orange.png',
-        price: 3,
-        quantity: 1
-    },
-    {
-        id: 2,
-        name: "Banana",
-        image: 'image/banana.jpeg',
-        price: 2,
-        quantity: 1
-    },
-    {
-        id: 3,
-        name: "Lemon",
-        image: 'image/lemon.png',
-        price: 5,
-        quantity: 1
-    }
-];
+let products = [{
+    name: "Orange",
+    image: 'image/orange.png',
+    price: 3,
+    quantity: 1
+}, {
+    name: "Banana",
+    image: 'image/banana.jpeg',
+    price: 2,
+    quantity: 1
+}, {
+    name: "Lemon",
+    image: 'image/lemon.png',
+    price: 5,
+    quantity: 1
+}];
 
 products.forEach((product) => {
     main.innerHTML += `<div class="card">
@@ -70,7 +63,7 @@ function add(button) {
             name: name,
             price: price,
             quantity: products.find(p => p.name === name).quantity,
-            PricePerQuantity: price
+            pricePerQuantity: price
         });
         total.innerHTML = `<i class="fa-solid fa-dollar-sign"></i>` + inCart.reduce((acc, item) => acc + item.price, 0);
     }
@@ -144,7 +137,7 @@ function decrement(button) {
     if(foundProduct) {
         if(foundProduct.quantity > 1) {
             foundProduct.quantity--;
-            foundProduct.price -= foundProduct.PricePerQuantity;
+            foundProduct.price -= foundProduct.pricePerQuantity;
 
             row.querySelector("td:nth-child(3)").innerText = foundProduct.price;
             row.querySelector("td:nth-child(4) span").innerText = foundProduct.quantity;
@@ -169,7 +162,7 @@ function increment(button) {
     let foundProduct = inCart.find(product => product.name === name);
     if(foundProduct) {
         foundProduct.quantity++;
-        foundProduct.price += foundProduct.PricePerQuantity;
+        foundProduct.price += foundProduct.pricePerQuantity;
 
         row.querySelector("td:nth-child(3)").innerText = foundProduct.price;
         row.querySelector("td:nth-child(4) span").innerText = foundProduct.quantity;
