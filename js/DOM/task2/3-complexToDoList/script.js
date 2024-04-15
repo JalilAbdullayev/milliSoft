@@ -13,46 +13,24 @@ add.addEventListener("click", function() {
         let option = document.createElement("option");
         option.appendChild(document.createTextNode(input.value));
         toDo.appendChild(option);
+        input.value = "";
     }
 })
 
-
-toDoToDoing.addEventListener('click', function() {
-    let selected = Array.from(toDo.options).filter(option => option.selected);
+function move(from, to) {
+    let selected = Array.from(from.options).filter(option => option.selected);
     for(let i = 0; i < selected.length; i++) {
         let option = document.createElement("option");
         option.appendChild(document.createTextNode(selected[i].text));
-        doing.appendChild(option);
+        to.appendChild(option);
         selected[i].remove();
     }
-})
+}
 
-doingToToDo.addEventListener('click', function() {
-    let selected = Array.from(doing.options).filter(option => option.selected);
-    for(let i = 0; i < selected.length; i++) {
-        let option = document.createElement("option");
-        option.appendChild(document.createTextNode(selected[i].text));
-        toDo.appendChild(option);
-        selected[i].remove();
-    }
-})
+toDoToDoing.addEventListener('click', () => move(toDo, doing));
 
-doingToDone.addEventListener('click', function() {
-    let selected = Array.from(doing.options).filter(option => option.selected);
-    for(let i = 0; i < selected.length; i++) {
-        let option = document.createElement("option");
-        option.appendChild(document.createTextNode(selected[i].text));
-        done.appendChild(option);
-        selected[i].remove();
-    }
-})
+doingToToDo.addEventListener('click', () => move(doing, toDo));
 
-doneToDoing.addEventListener('click', function() {
-    let selected = Array.from(done.options).filter(option => option.selected);
-    for(let i = 0; i < selected.length; i++) {
-        let option = document.createElement("option");
-        option.appendChild(document.createTextNode(selected[i].text));
-        doing.appendChild(option);
-        selected[i].remove();
-    }
-})
+doingToDone.addEventListener('click', () => move(doing, done));
+
+doneToDoing.addEventListener('click', () => move(done, doing));
