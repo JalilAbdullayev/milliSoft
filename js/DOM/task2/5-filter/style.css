@@ -30,6 +30,7 @@ h1 {
         line-height: 50px;
         cursor: pointer;
         border-radius: 10px;
+        text-transform: capitalize;
     }
 
     input {
@@ -47,6 +48,7 @@ h1 {
     flex-flow: row wrap;
     justify-content: center;
     padding: 0 30px;
+    gap: 105px;
 
     .card {
         display: flex;
