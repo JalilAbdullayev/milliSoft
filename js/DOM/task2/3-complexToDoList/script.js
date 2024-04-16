@@ -17,10 +17,10 @@ add.addEventListener("click", function() {
 
 function move(from, to) {
     let selected = Array.from(from.options).filter(option => option.selected);
-    for(const element of selected) {
+    selected.forEach(element => {
         to.innerHTML += `<option>${element.text}</option>`;
         element.remove();
-    }
+    })
 }
 
 toDoToDoing.addEventListener('click', () => move(toDo, doing));
