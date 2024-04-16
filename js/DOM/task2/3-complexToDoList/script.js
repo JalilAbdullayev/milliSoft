@@ -10,20 +10,16 @@ let doneToDoing = document.querySelector("#doneToDoing");
 
 add.addEventListener("click", function() {
     if(input.value.length > 0) {
-        let option = document.createElement("option");
-        option.appendChild(document.createTextNode(input.value));
-        toDo.appendChild(option);
+        toDo.innerHTML += `<option>${input.value}</option>`;
         input.value = "";
     }
 })
 
 function move(from, to) {
     let selected = Array.from(from.options).filter(option => option.selected);
-    for(let i = 0; i < selected.length; i++) {
-        let option = document.createElement("option");
-        option.appendChild(document.createTextNode(selected[i].text));
-        to.appendChild(option);
-        selected[i].remove();
+    for(const element of selected) {
+        to.innerHTML += `<option>${element.text}</option>`;
+        element.remove();
     }
 }
 
