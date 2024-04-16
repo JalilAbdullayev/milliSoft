@@ -33,7 +33,7 @@
 * [Education](https://github.com/JalilAbdullayev/milliSoft/tree/main/css/projects/education)
 * [Eco Harvest](https://github.com/JalilAbdullayev/milliSoft/tree/main/css/projects/eco-harvest)
 * [Dolcino](https://github.com/JalilAbdullayev/milliSoft/tree/main/css/projects/dolcino)
-* [QLearn](https://github.com/JalilAbdullayev/milliSoft/tree/main/css/projects/qlearn)
+* [QLearn](https://github.com/JalilAbdullayev/milliSoft/tree/main/css/projects/qLearn)
 * [Gear](https://github.com/JalilAbdullayev/milliSoft/tree/main/css/projects/gear)
 
 3. [JavaScript](https://github.com/JalilAbdullayev/milliSoft/tree/main/js)
