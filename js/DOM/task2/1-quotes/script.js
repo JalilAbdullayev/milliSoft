@@ -31,16 +31,26 @@ let button = document.createElement('button');
 let buttonText = document.createTextNode('Change');
 button.appendChild(buttonText);
 document.body.appendChild(button);
+let lastIndex = -1;
 
 function quote() {
     let random = Math.floor(Math.random() * quotes.length);
 
-    while (p.firstChild) p.removeChild(p.firstChild);
+    do {
+        random = Math.floor(Math.random() * quotes.length);
+    } while(random === lastIndex);
+    lastIndex = random;
+
+    while(p.firstChild) {
+        p.removeChild(p.firstChild);
+    }
     let quote = document.createTextNode('"' + quotes[random].quote + '"');
     p.appendChild(quote);
     document.querySelector('div').appendChild(p);
 
-    while (h3.firstChild) h3.removeChild(h3.firstChild);
+    while(h3.firstChild) {
+        h3.removeChild(h3.firstChild);
+    }
     let author = document.createTextNode(quotes[random].author);
     h3.appendChild(author);
     document.querySelector('div').appendChild(h3);
