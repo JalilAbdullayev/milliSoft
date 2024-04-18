@@ -15,8 +15,18 @@ let style = document.createElement('style');
 document.head.appendChild(style);
 
 function filterProduct(filter, product) {
-    const productArr = products.filter(p => p !== product);
-    const filterArr = filters.filter(f => f !== filter);
+    const productArr = [];
+    const filterArr = [];
+    products.forEach(element => {
+        if(element !== product) {
+            productArr.push(element);
+        }
+    })
+    filters.forEach(element => {
+        if(element !== filter) {
+            filterArr.push(element);
+        }
+    })
     filterArr.forEach(f => f.style.color = '#7B8E9D');
     filter.style.color = '#408858';
     let styles = "";
