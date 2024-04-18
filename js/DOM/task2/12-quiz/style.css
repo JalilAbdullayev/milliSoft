@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Calibri, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+#container {
+    width: 1025px;
+    height: 122px;
+    background-color: #4A7BFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 10px;
+    box-shadow: black 0 0 10px;
+
+    button {
+        padding: 15px;
+        border: none;
+    }
+}
+
+#game {
+    background-color: #4A7BFF;
+    width: 90%;
+    text-align: center;
+    display: none;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 100px;
+    border-radius: 10px;
+    box-shadow: #000 0 0 20px;
+
+    p {
+        background-color: #4244FF;
+        color: #FFF;
+        padding: 10px;
+        box-shadow: #000 0 0 20px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    #variants {
+        width: 80%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 30px;
+
+        button {
+            background-color: transparent;
+            border: 1px solid #FFF;
+            width: 350px;
+            height: 40px;
+            color: #FFF;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .right {
+            background-color: #009500;
+        }
+
+        .wrong {
+            background-color: #FF0200;
+        }
+    }
+
+    #buttons {
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+
+        button {
+            border-radius: 50%;
+            font-size: 20px;
+        }
+
+        .arrows {
+            background-color: #FFF;
+            color: #010352;
+            border: 3px solid #010352;
+            padding: 10px;
+        }
+
+        #pagination {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            button {
+                background-color: #010352;
+                color: #FFF;
+                border: none;
+                width: 30px;
+                height: 30px;
+            }
+
+            .active {
+                background-color: #00841B;
+            }
+        }
+    }
+
+    #result {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 35px;
+        color: #FFF;
+
+        ul {
+            list-style-type: none;
+            font-weight: bolder;
+
+            li {
+                padding: 5px;
+                font-size: 20px;
+            }
+        }
+    }
+}
