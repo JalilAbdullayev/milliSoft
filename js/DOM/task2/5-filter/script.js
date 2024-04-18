@@ -86,8 +86,13 @@ createCard()
 function filter() {
     cards.innerHTML = '';
     let value = this.getAttribute('id');
-    let result = elements.filter((element) => element.category === value);
-    result.forEach((element) => {
+    let result = [];
+    for(let element of elements) {
+        if(element.category === value) {
+            result.push(element);
+        }
+    }
+    for(let element of result) {
         cards.innerHTML += `
         <div class="card ${element.category}">
             <div class="card-img">
@@ -100,8 +105,8 @@ function filter() {
                 </p>
             </div>
         </div>
-        `
-    });
+        `;
+    }
     if(this.id === 'all') {
         createCard();
     }
