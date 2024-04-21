@@ -1,29 +1,35 @@
-let input = document.querySelector("input");
-let volume = document.querySelector("h3");
+let volumeBar = document.querySelector("#volumeBar");
+let volume = document.querySelector("#volume");
 let lower = document.querySelector("#lower");
 let higher = document.querySelector("#higher");
+let volumeText = document.querySelector("h3");
 
-function updateValue() {
-    let value = (input.value - input.min) / (input.max - input.min) * 100;
-    input.style.background = 'linear-gradient(to right, #FFBE13 0%, #FFBE13 ' + value + '%, #fff ' + value + '%, white' +
-        ' 100%)';
-    if(input.value != 0) {
-        volume.innerText = input.value + '%';
-    }
+
+volumeBar.onclick = () => {
+    let x = Number(event.offsetX);
+    let perc = Math.floor(x / volumeBar.offsetWidth * 100) + "%";
+    volume.style.width = perc;
+    volumeText.innerText = perc;
 }
 
-input.oninput = updateValue;
-
-lower.onclick = function() {
-    if(input.value >= 0) {
-        input.value--;
-        updateValue();
+lower.onclick = () => {
+    let vol = Number(volume.style.width.split('%')[0]);
+    let updateVol = vol - 1 + "%";
+    if(vol === 0) {
+        alert('Minimum volume reached');
+    } else {
+        volume.style.width = updateVol;
+        volumeText.innerText = updateVol;
     }
 };
 
-higher.onclick = function() {
-    if(input.value < 100) {
-        input.value++;
-        updateValue();
+higher.onclick = () => {
+    let vol = Number(volume.style.width.split('%')[0]);
+    let updateVol = vol + 1 + "%";
+    if(vol === 100) {
+        alert('Maximum volume reached');
+    } else {
+        volume.style.width = updateVol;
+        volumeText.innerText = updateVol;
     }
 };

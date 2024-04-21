@@ -26,16 +26,15 @@ h1 {
     gap: 5px;
     width: 50%;
 
-    input {
+    #volumeBar {
         width: 90%;
         border: solid 1px black;
-        height: 35px;
-        outline: none;
-        transition: background 450ms ease-in;
-        appearance: none;
 
-        &::-webkit-slider-thumb {
-            opacity: 0;
+        #volume {
+            width: 0%;
+            transition: .1s;
+            height: 35px;
+            background: linear-gradient(to right, #FFBE13 100%, #FFBE13 100%, #fff 100%, #FFF 100%);
         }
     }
 
