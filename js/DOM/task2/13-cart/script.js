@@ -1,7 +1,7 @@
 let main = document.querySelector("main");
 let cart = document.querySelector("header button:first-child");
-let cartCount = document.querySelector("header button:first-child span");
-let clearCart = document.querySelector("header button:last-child");
+let cartCount = document.querySelector("#showCart span");
+let clearCart = document.querySelector("#clearCart");
 let cartModal = document.querySelector("#cart-container");
 let tbody = document.querySelector("table tbody");
 let close = document.querySelector("#close");
@@ -23,6 +23,10 @@ let products = [{
     price: 5,
     quantity: 1
 }];
+
+function totalCount() {
+    total.innerHTML = `<i class="fa-solid fa-dollar-sign"></i>` + inCart.reduce((acc, item) => acc + item.price, 0);
+}
 
 products.forEach((product) => {
     main.innerHTML += `<div class="card">
@@ -56,7 +60,7 @@ function add(button) {
     if(found) {
         found.quantity++;
         inCart.price = found.price += price;
-        total.innerHTML = `<i class="fa-solid fa-dollar-sign"></i>` + inCart.reduce((acc, item) => acc + item.price, 0);
+        totalCount();
     } else {
         inCart.push({
             img: img,
@@ -65,62 +69,42 @@ function add(button) {
             quantity: products.find(p => p.name === name).quantity,
             pricePerQuantity: price
         });
-        total.innerHTML = `<i class="fa-solid fa-dollar-sign"></i>` + inCart.reduce((acc, item) => acc + item.price, 0);
+        totalCount();
     }
 
     cartCount.innerText = "(" + inCart.length + ")";
     tbody.innerHTML = "";
     inCart.forEach((product) => {
-        let newRow = document.createElement("tr");
-        let imageCell = document.createElement("td");
-        let image = new Image();
-        image.src = product.img;
-        image.alt = product.name;
-        imageCell.appendChild(image);
-
-        let nameCell = document.createElement("td");
-        nameCell.innerText = product.name;
-
-        let priceCell = document.createElement("td");
-        priceCell.innerText = product.price;
-
-        let quantityCell = document.createElement("td");
-        quantityCell.innerHTML = `
-        <button onclick="decrement(this)">
+        let newRow = '';
+        newRow += `
+        <tr><td><img src="${product.img}" alt="${product.name}"/></td>
+        <td>${product.name}</td>
+        <td>${product.price}</td>
+        <td><button onclick="decrement(this)">
             <i class="fa-solid fa-minus"></i>
         </button>
             <span>${product.quantity}</span>
         <button onclick="increment(this)">
             <i class="fa-solid fa-plus"></i>
-        </button>
-`;
+        </button></td>
+        <td><button id="removeCell" onclick="removeCell(this)"><i class="fa-solid fa-xmark"></i></button></td></tr>`;
 
-        let removeCell = document.createElement("td");
-        let removeButton = document.createElement("button");
-        removeButton.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
-        removeButton.onclick = () => {
-            let card = removeButton.parentElement.parentElement;
-            let name = card.querySelector("td:nth-child(2)").innerText;
-            for(let i = 0; i < inCart.length; i++) {
-                if(inCart[i].name === name) {
-                    inCart.splice(i, 1);
-                    total.innerHTML = `<i class="fa-solid fa-dollar-sign"></i>` + inCart.reduce((acc, item) => acc + item.price, 0);
-                    break;
-                }
-            }
-            cartCount.innerText = "(" + inCart.length + ")";
-            removeButton.parentElement.parentElement.remove();
-        };
-        removeCell.appendChild(removeButton);
-
-        newRow.appendChild(imageCell);
-        newRow.appendChild(nameCell);
-        newRow.appendChild(priceCell);
-        newRow.appendChild(quantityCell);
-        newRow.appendChild(removeCell);
-
-        tbody.appendChild(newRow);
+        tbody.innerHTML += newRow;
     })
+}
+
+function removeCell(button) {
+    let card = button.parentElement.parentElement;
+    let name = card.querySelector("td:nth-child(2)").innerText;
+    for(let i = 0; i < inCart.length; i++) {
+        if(inCart[i].name === name) {
+            inCart.splice(i, 1);
+            totalCount();
+            break;
+        }
+    }
+    cartCount.innerText = "(" + inCart.length + ")";
+    card.remove();
 }
 
 clearCart.addEventListener("click", () => {
@@ -141,7 +125,7 @@ function decrement(button) {
 
             row.querySelector("td:nth-child(3)").innerText = foundProduct.price;
             row.querySelector("td:nth-child(4) span").innerText = foundProduct.quantity;
-            total.innerHTML = `<i class="fa-solid fa-dollar-sign"></i>` + inCart.reduce((acc, item) => acc + item.price, 0);
+            totalCount();
         } else {
             for(let i = 0; i < inCart.length; i++) {
                 if(inCart[i].name === name) {
@@ -149,7 +133,7 @@ function decrement(button) {
                     break;
                 }
             }
-            total.innerHTML = `<i class="fa-solid fa-dollar-sign"></i>` + inCart.reduce((acc, item) => acc + item.price, 0);
+            totalCount();
             cartCount.innerText = "(" + inCart.length + ")";
             row.remove();
         }
@@ -166,6 +150,6 @@ function increment(button) {
 
         row.querySelector("td:nth-child(3)").innerText = foundProduct.price;
         row.querySelector("td:nth-child(4) span").innerText = foundProduct.quantity;
-        total.innerHTML = `<i class="fa-solid fa-dollar-sign"></i>` + inCart.reduce((acc, item) => acc + (item.price), 0);
+        totalCount();
     }
 }
