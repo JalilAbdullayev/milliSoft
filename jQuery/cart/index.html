@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>
+        Cart jQuery
+    </title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+<header>
+    <button id="showCart">
+        Cart <span></span>
+    </button>
+    <button id="clearCart">
+        Clear Cart
+    </button>
+</header>
+<main></main>
+<div id="cart-container">
+    <div id="cart">
+        <div id="cart-header">
+            <h3>
+                <strong>
+                    Cart
+                </strong>
+            </h3>
+            <div id="close">
+                <strong>
+                    <i class="fa-solid fa-xmark"></i>
+                </strong>
+            </div>
+        </div>
+        <table>
+            <tbody></tbody>
+        </table>
+        <p id="total-container">Total: <span id="total"></span></p>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
