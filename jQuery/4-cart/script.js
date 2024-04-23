@@ -48,9 +48,9 @@ let inCart = [];
 
 function add(button) {
     let card = $(button).closest('.card');
-    let img = $(card).find("img").attr('src');
-    let name = $(card).find("h1").text();
-    let price = parseInt($(card).find("span").text());
+    let img = card.find("img").attr('src');
+    let name = card.find("h1").text();
+    let price = parseInt(card.find("span").text());
     let found = inCart.find(product => product.name === name);
     if(found) {
         found.quantity++;
@@ -90,7 +90,7 @@ function add(button) {
 
 function removeCell(button){
     let card = $(button).closest('tr');
-    let name = $(card).find("td:nth-child(2)").text();
+    let name = card.find("td:nth-child(2)").text();
     for(let i = 0; i < inCart.length; i++) {
         if(inCart[i].name === name) {
             inCart.splice(i, 1);
@@ -111,15 +111,15 @@ $('#clearCart').click(() => {
 
 function decrement(button) {
     let row = $(button).closest('tr');
-    let name = $(row).find("td:nth-child(2)").text();
+    let name = row.find("td:nth-child(2)").text();
     let foundProduct = inCart.find(product => product.name === name);
     if(foundProduct) {
         if(foundProduct.quantity > 1) {
             foundProduct.quantity--;
             foundProduct.price -= foundProduct.pricePerQuantity;
 
-            $(row).find("td:nth-child(3)").text(foundProduct.price);
-            $(row).find("td:nth-child(4) span").text(foundProduct.quantity);
+            row.find("td:nth-child(3)").text(foundProduct.price);
+            row.find("td:nth-child(4) span").text(foundProduct.quantity);
             total();
         } else {
             for(let i = 0; i < inCart.length; i++) {
@@ -137,14 +137,14 @@ function decrement(button) {
 
 function increment(button) {
     let row = $(button).closest('tr');
-    let name = $(row).find("td:nth-child(2)").text();
+    let name = row.find("td:nth-child(2)").text();
     let foundProduct = inCart.find(product => product.name === name);
     if(foundProduct) {
         foundProduct.quantity++;
         foundProduct.price += foundProduct.pricePerQuantity;
 
-        $(row).find("td:nth-child(3)").text(foundProduct.price);
-        $(row).find("td:nth-child(4) span").text(foundProduct.quantity);
+        row.find("td:nth-child(3)").text(foundProduct.price);
+        row.find("td:nth-child(4) span").text(foundProduct.quantity);
         total();
     }
 }

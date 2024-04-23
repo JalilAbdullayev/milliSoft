@@ -77,7 +77,7 @@
 
 4. [jQuery](https://github.com/JalilAbdullayev/milliSoft/tree/main/jQuery)
 
-* [Cart](https://github.com/JalilAbdullayev/milliSoft/tree/main/jQuery/cart)
+* [Cart](https://github.com/JalilAbdullayev/milliSoft/tree/main/jQuery/4-cart)
 
 5. [Exam](https://github.com/JalilAbdullayev/milliSoft/tree/main/exam)
 
