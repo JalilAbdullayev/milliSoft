@@ -7,8 +7,7 @@ let fennler = ["Azdili", "Riyaziyyat"]
 
 let levels = ["Asan", "Orta", "Cetin"]
 
-let array = [
-    {
+let array = [{
         question: "5 %-i 2 olan ədədi tap?",
         A: "A)43",
         B: "B)40",
@@ -17,7 +16,8 @@ let array = [
         correctvariant: "B)40",
         subject: "Riyaziyyat",
         level: "Asan",
-    }, {
+    },
+    {
         question: "(x+3)+(x+1)=12 Tənliyi həll edin?",
         A: "A)3",
         B: "B)5",
@@ -26,7 +26,8 @@ let array = [
         correctvariant: "C)4",
         subject: "Riyaziyyat",
         level: "Asan",
-    }, {
+    },
+    {
         question: "Sürəti 7 olan neçə düzgün olmayan kəsr var?",
         A: "A)7",
         B: "B)32",
@@ -35,7 +36,8 @@ let array = [
         correctvariant: "A)7",
         subject: "Riyaziyyat",
         level: "Asan",
-    }, {
+    },
+    {
         question: "4%-i 5,6 olan ədədi tapın:",
         A: "A)48",
         B: "B)400",
@@ -44,7 +46,8 @@ let array = [
         correctvariant: "D)140",
         subject: "Riyaziyyat",
         level: "Asan",
-    }, {
+    },
+    {
         question: "0,1(3) sonsuz dövrü onluq kəsrini adi kəsrə çevirin.",
         A: "A)2/15",
         B: "B)26/15",
@@ -53,7 +56,8 @@ let array = [
         correctvariant: "A)2/15",
         subject: "Riyaziyyat",
         level: "Asan",
-    }, {
+    },
+    {
         question:
             "İki ədədin cəmi 5, fərqi 3-dür.Bu ədədlərin hasilini tapın?",
         A: "A)4",
@@ -63,7 +67,8 @@ let array = [
         correctvariant: "A)4",
         subject: "Riyaziyyat",
         level: "Orta",
-    }, {
+    },
+    {
         question: "X≠0 olarsa, 2x(x+y)=5y,x(x-y)=y olduqda x-i tapın?",
         A: "A)3/4",
         B: "B)5",
@@ -72,7 +77,8 @@ let array = [
         correctvariant: "A)3/4",
         subject: "Riyaziyyat",
         level: "Orta",
-    }, {
+    },
+    {
         question:
             "x+y=5,x-y=1 olduğuna görə, x2-y2+3x+3y ifadəsinin qiymətini tapın?",
         A: "A)10",
@@ -82,7 +88,8 @@ let array = [
         correctvariant: "B)20",
         subject: "Riyaziyyat",
         level: "Orta",
-    }, {
+    },
+    {
         question: "2x+y=5,x-3y=-5 tənliklər sistemindən x+y cəmini tapın?",
         A: "A)4",
         B: "B)7",
@@ -91,7 +98,8 @@ let array = [
         correctvariant: "C)3",
         subject: "Riyaziyyat",
         level: "Orta",
-    }, {
+    },
+    {
         question: "x+3=2(y-4),y-2=4x tənliklər sistemindən x-i tapın:",
         A: "A)1/15",
         B: "B)2/15",
@@ -100,7 +108,8 @@ let array = [
         correctvariant: "B)2/15",
         subject: "Riyaziyyat",
         level: "Orta",
-    }, {
+    },
+    {
         question: "Hesablayın: (9-2√10)(9+2√10)?",
         A: "A)36",
         B: "B)12",
@@ -109,7 +118,8 @@ let array = [
         correctvariant: "D)41",
         subject: "Riyaziyyat",
         level: "Cetin",
-    }, {
+    },
+    {
         question: "Hesablayın: (3√5+√15)2-10√27?",
         A: "A)80",
         B: "B)70",
@@ -118,7 +128,8 @@ let array = [
         correctvariant: "C)60",
         subject: "Riyaziyyat",
         level: "Cetin",
-    }, {
+    },
+    {
         question: "√(5+2√6)=?",
         A: "A)√2+√6",
         B: "B)√3+√2",
@@ -127,7 +138,8 @@ let array = [
         correctvariant: "B)√3+√2",
         subject: "Riyaziyyat",
         level: "Cetin",
-    }, {
+    },
+    {
         question: "A=√6+1 və b=√6 -1 olduğuna görə, a:b+b:a=?",
         A: "A)2,8",
         B: "B)3,8",
@@ -136,7 +148,8 @@ let array = [
         correctvariant: "A)2,8",
         subject: "Riyaziyyat",
         level: "Cetin",
-    }, {
+    },
+    {
         question: "(x-3)2+(y+7)2=0 isə, xy=?",
         A: "A)23",
         B: "B)-32",
@@ -145,7 +158,8 @@ let array = [
         correctvariant: "D)-21",
         subject: "Riyaziyyat",
         level: "Cetin",
-    }, {
+    },
+    {
         question: "Azərbaycan dilində neçə sait var?",
         A: "A)8",
         B: "B)9",
@@ -154,7 +168,8 @@ let array = [
         correctvariant: "B)9",
         subject: "Azdili",
         level: "Asan",
-    }, {
+    },
+    {
         question: "Azərbaycan dilində neçə samit səs var?",
         A: "A)34",
         B: "B)23",
@@ -163,7 +178,8 @@ let array = [
         correctvariant: "C)25",
         subject: "Azdili",
         level: "Asan",
-    }, {
+    },
+    {
         question: "Hansı kar samitin cingiltili qarşılığı yoxdur?",
         A: "A)H",
         B: "B)F",
@@ -172,7 +188,8 @@ let array = [
         correctvariant: "A)H",
         subject: "Azdili",
         level: "Asan",
-    }, {
+    },
+    {
         question: "Əlifbada neçə hərf var?",
         A: "A)30",
         B: "B)23",
@@ -181,7 +198,8 @@ let array = [
         correctvariant: "C)32",
         subject: "Azdili",
         level: "Asan",
-    }, {
+    },
+    {
         question: "Bitişdirici samitləri göstərin:",
         A: "A)d,t,l",
         B: "B)n,m,s",
@@ -190,7 +208,8 @@ let array = [
         correctvariant: "D)n,y,s",
         subject: "Azdili",
         level: "Asan",
-    }, {
+    },
+    {
         question: "Qrammatik cəhətdən feil bildirir?",
         A: "A)Hərəkət",
         B: "B)Xususiyyət",
@@ -199,7 +218,8 @@ let array = [
         correctvariant: "A)Hərəkət",
         subject: "Azdili",
         level: "Orta",
-    }, {
+    },
+    {
         question: "Feilin neçə sadə şəkli var?",
         A: "A)4",
         B: "B)5",
@@ -208,7 +228,8 @@ let array = [
         correctvariant: "C)6",
         subject: "Azdili",
         level: "Orta",
-    }, {
+    },
+    {
         question: "Feil haqqında hansı fikir səhvdir?",
         A: "A)feilin dərəcələri var",
         B: "B)feil hərəkət bildirir",
@@ -217,7 +238,8 @@ let array = [
         correctvariant: "A)feilin dərəcələri var",
         subject: "Azdili",
         level: "Orta",
-    }, {
+    },
+    {
         question: "Feilin quruluşca neçə novu var?",
         A: "A)5",
         B: "B)6",
@@ -226,7 +248,8 @@ let array = [
         correctvariant: "D)3",
         subject: "Azdili",
         level: "Orta",
-    }, {
+    },
+    {
         question: "Feil cümlədə əsasən hansı cümlə üzvü olur?",
         A: "A)təyin",
         B: "B)mübtəda",
@@ -235,7 +258,8 @@ let array = [
         correctvariant: "C)xəbər",
         subject: "Azdili",
         level: "Orta",
-    }, {
+    },
+    {
         question: "Hansı əlaqə növü bütün tabeli mürəkkəb cümlələrdə olur?",
         A: "A)Qarşılaşdırma",
         B: "B)Zaman",
@@ -244,7 +268,8 @@ let array = [
         correctvariant: "B)Zaman",
         subject: "Azdili",
         level: "Cetin",
-    }, {
+    },
+    {
         question: "Mürəkkəb cümlənin hansı növləri var?",
         A: "A)tabeli, tabesiz",
         B: "B)düzəltmə",
@@ -253,7 +278,8 @@ let array = [
         correctvariant: "A)tabeli, tabesiz",
         subject: "Azdili",
         level: "Cetin",
-    }, {
+    },
+    {
         question: "Mürəkkəb cümlənin neçə novu var?",
         A: "A)6",
         B: "B)2",
@@ -262,7 +288,8 @@ let array = [
         correctvariant: "D)3",
         subject: "Azdili",
         level: "Cetin",
-    }, {
+    },
+    {
         question: "Hansı bağlayıcı merəkkəb cümlənin tərəflərini bağlamır?",
         A: "A)ancaq",
         B: "B)ilə",
@@ -271,7 +298,8 @@ let array = [
         correctvariant: "B)ilə",
         subject: "Azdili",
         level: "Cetin",
-    }, {
+    },
+    {
         question: "Mürəkkəb cümlələr neçə növə ayrılır?",
         A: "A)2",
         B: "B)4",
@@ -286,17 +314,20 @@ fennler.forEach(elem => {
     container.innerHTML += `<button class="subject" onclick="chooseDifficulty('${elem}')">${elem}</button>`;
 });
 
+//* Çətiniliyi seç
 function chooseDifficulty(subject) {
     container.innerHTML = ``;
-    levels.forEach(elem => {
-        container.innerHTML += `<button onclick="startGame('${elem}', '${subject}')" class="${subject}">${elem}</button>`;
+    levels.forEach(level => {
+        container.innerHTML += `<button onclick="startGame('${level}', '${subject}')" class="${subject}">${level}</button>`;
     });
 }
 
+//* Fənn və səviyyənin suallarını gətirir
 function getData(level, subject) {
     return array.filter(elem => elem.level === level && elem.subject === subject);
 }
 
+//* Paginationla sualların HTML-ini gətirir
 function getContent(i, level, subject) {
     let data = getData(level, subject);
     let pagination = ``;
@@ -330,48 +361,65 @@ function getContent(i, level, subject) {
 </div>`;
 }
 
+//* Paginationa clicklədikdə uyğun sıradakı sualı gətirir
 function getPages(i, level, subject) {
     game.innerHTML = getContent(i, level, subject);
 }
 
+//* Quizi başladır
 function startGame(level, subject) {
     container.style.display = 'none';
     game.style.display = 'flex';
     game.innerHTML = getContent(0, level, subject);
 }
 
+//* Cavab seçildikdə:
 function chooseAnswer(answer, i, level, subject) {
     let data = getData(level, subject);
     let buttons = document.querySelectorAll("#variants button");
+    //* Cavab doğrudursa:
     if(answer === data[i].correctvariant) {
         for(const element of buttons) {
             if(element.innerHTML === answer) {
+                //* Doğrudursa right classı əlavə olunsun
                 element.classList.add("right");
             }
         }
+        //* Variant seçiləndən 1 saniyə sonra sualı dəyişir
         setTimeout(() => {
             next(i, level, subject);
         }, 1000);
+        //* Doğru sual sayı
         rightAnswers++;
+        //* Cavab səhvdirsə:
     } else {
         for(const element of buttons) {
             if(element.innerHTML === answer) {
+                //* Səhvdirsə wrong classı əlavə olunsun
                 element.classList.add("wrong");
             }
             if(element.innerHTML === data[i].correctvariant) {
+                //* Doğru cavaba right classı əlavə olunsun
                 element.classList.add("right");
             }
         }
+        //* Səhv sual sayı
         wrongAnswers++;
+        //* Variant seçiləndən 1 saniyə sonra növbəti suala keçir
         setTimeout(() => {
             next(i, level, subject);
         }, 1000);
     }
 }
 
+//* Növbəti sual
 function next(i, level, subject) {
     let data = getData(level, subject);
-    let unAnswered = data.length - rightAnswers - wrongAnswers;
+    //* Cavablandırılmış suallar
+    let answered = rightAnswers + wrongAnswers;
+    //* Sualların sayından cavablandırılmış sualların sayını çıxıb cavablandırılmamışları tapır
+    let unAnswered = data.length - answered;
+    //* Əgər sonuncu sualdadırsa nəticəni çıxarsın
     if(i + 1 > data.length - 1) {
         game.innerHTML = `<div id="result">
 <h1>Nəticə</h1>
@@ -383,14 +431,18 @@ function next(i, level, subject) {
 </ul>
 </div>`
     } else {
+        //* Növbəti sualı gətirir
         game.innerHTML = getContent(i + 1, level, subject);
     }
 }
 
+//* Əvvəlki sual
 function previous(i, level, subject) {
+    //* Əgər ilk sualdadırsa alert çıxarır
     if(i - 1 < 0) {
         alert("İlk sualdasınız.");
     } else {
+        //* Əvvəlki sualı gətirir
         game.innerHTML = getContent(i - 1, level, subject);
     }
 }
