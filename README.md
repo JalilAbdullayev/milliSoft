@@ -78,6 +78,7 @@
 4. [jQuery](https://github.com/JalilAbdullayev/milliSoft/tree/main/jQuery)
 
 * [Gallery](https://github.com/JalilAbdullayev/milliSoft/tree/main/jQuery/1-gallery)
+* [Table](https://github.com/JalilAbdullayev/milliSoft/tree/main/jQuery/2-table)
 * [Cart](https://github.com/JalilAbdullayev/milliSoft/tree/main/jQuery/4-cart)
 
 5. [Exam](https://github.com/JalilAbdullayev/milliSoft/tree/main/exam)
