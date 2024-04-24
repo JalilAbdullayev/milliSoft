@@ -3,6 +3,12 @@ let search = document.querySelector('input[type=search]');
 let add = document.querySelector('button#add');
 let addBtn = document.querySelector('button#addBtn');
 let close = document.querySelectorAll('button.close');
+let editName = document.querySelector('input#editName');
+let editBtn = document.querySelector('button#editBtn');
+let editSurname = document.querySelector('input#editSurname');
+let editAge = document.querySelector('input#editAge');
+let editModal = document.querySelector('div#editModal');
+let addModal = document.querySelector('div#addModal');
 let people = [
     {
         name: 'John',
@@ -72,7 +78,7 @@ if(search.value === '') {
 }
 
 add.addEventListener('click', () => {
-    document.querySelector('#addModal').style.display = 'flex';
+    addModal.style.display = 'flex';
 })
 
 addBtn.addEventListener('click', () => {
@@ -89,7 +95,7 @@ addBtn.addEventListener('click', () => {
     name.value = ''
     surname.value = ''
     age.value = ''
-    document.querySelector('#addModal').style.display = 'none';
+    addModal.style.display = 'none';
 })
 
 function remove(index) {
@@ -99,29 +105,43 @@ function remove(index) {
 }
 
 function edit(index) {
-    document.querySelector('#editModal').style.display = 'flex';
-    let name = document.querySelector('#editName');
-    let surname = document.querySelector('#editSurname');
-    let age = document.querySelector('#editAge');
-    name.value = people[index].name
-    surname.value = people[index].surname
-    age.value = people[index].age
-    document.querySelector('#editBtn').addEventListener('click', () => {
-        people[index].name = name.value
-        people[index].surname = surname.value
-        people[index].age = age.value
-        tbody.innerHTML = ''
-        getData(people)
-        name.value = ''
-        surname.value = ''
-        age.value = ''
-        document.querySelector('#editModal').style.display = 'none';
-    })
+    function fill(person) {
+        editName.value = person.name;
+        editSurname.value = person.surname;
+        editAge.value = person.age;
+    }
+
+    function update(person, newName, newSurname, newAge) {
+        person.name = newName;
+        person.surname = newSurname;
+        person.age = newAge;
+        tbody.innerHTML = '';
+        getData(people);
+    }
+
+    editModal.style.display = 'flex';
+    let person = people[index];
+    fill(person);
+
+    editBtn.addEventListener('click', updateHandler, {once: true});
+
+    function updateHandler() {
+        let newName = editName.value;
+        let newSurname = editSurname.value;
+        let newAge = editAge.value;
+
+        update(person, newName, newSurname, newAge);
+
+        editName.value = '';
+        editSurname.value = '';
+        editAge.value = '';
+        editModal.style.display = 'none';
+    }
 }
 
 close.forEach((btn) => {
     btn.addEventListener('click', () => {
-        document.querySelector('#addModal').style.display = 'none';
-        document.querySelector('#editModal').style.display = 'none';
+        addModal.style.display = 'none';
+        editModal.style.display = 'none';
     })
 })
