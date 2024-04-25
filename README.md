@@ -82,6 +82,10 @@
 * [Grades](https://github.com/JalilAbdullayev/milliSoft/tree/main/jQuery/3-grades)
 * [Cart](https://github.com/JalilAbdullayev/milliSoft/tree/main/jQuery/4-cart)
 
-5. [Exam](https://github.com/JalilAbdullayev/milliSoft/tree/main/exam)
+5. [Bootstrap](https://github.com/JalilAbdullayev/milliSoft/tree/main/bootstrap)
+
+* [Blog Home](https://github.com/JalilAbdullayev/milliSoft/tree/main/bootstrap/blogHome)
+
+6. [Exam](https://github.com/JalilAbdullayev/milliSoft/tree/main/exam)
 
 - [Exam 1](https://github.com/JalilAbdullayev/milliSoft/tree/main/exam/exam1)
