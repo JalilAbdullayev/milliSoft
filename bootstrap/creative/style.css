@@ -12,6 +12,10 @@ h1, h2, h4 {
     font-family: "Merriweather Sans", sans-serif;
 }
 
+h1 {
+    font-size: 3.5rem;
+}
+
 .bg-orange {
     background-color: #F4623A;
 }
@@ -27,16 +31,17 @@ h1, h2, h4 {
     border-radius: 10rem;
 }
 
+hr {
+    height: .2rem;
+    width: 3.25rem;
+}
+
 header {
     background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("image/header.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-
-    .navbar {
-        transition: .3s;
-    }
 
     nav {
         a {
@@ -48,27 +53,6 @@ header {
         }
     }
 
-    .transition {
-        transition: .3s;
-    }
-
-    .shrink {
-        opacity: .8;
-
-        &:hover {
-            color: #F4623A !important;
-        }
-    }
-
-    h1 {
-        font-size: 3.5rem;
-    }
-
-    hr {
-        height: .2rem;
-        width: 3.25rem;
-    }
-
     p {
         font-size: 1.15rem;
     }
@@ -78,15 +62,15 @@ header {
     }
 }
 
-#about hr {
-    height: .2rem;
-    width: 3.25rem;
+.navbar {
+    transition: .3s;
 }
 
-#services {
-    hr {
-        height: .2rem;
-        width: 3.25rem;
+.shrink {
+    opacity: .8;
+
+    &:hover {
+        color: #F4623A !important;
     }
 }
 
@@ -112,11 +96,6 @@ header {
         font-family: "Merriweather", serif;
     }
 
-    .focus {
-        border-color: #FAB19D;
-        box-shadow: 0 0 0 0.25rem rgba(244, 98, 58, 0.25);
-    }
-
     textarea {
         height: 10rem;
     }
@@ -124,4 +103,9 @@ header {
     input[type="submit"]:hover {
         background-color: #F4623A;
     }
+}
+
+.focus {
+    border-color: #FAB19D;
+    box-shadow: 0 0 0 0.25rem rgba(244, 98, 58, 0.25);
 }
