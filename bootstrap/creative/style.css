@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+.page-section {
+    padding: 8rem 0;
+}
+
+p {
+    font-family: Merriweather, serif;
+}
+
+h1, h2, h4 {
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+.bg-orange {
+    background-color: #F4623A;
+}
+
+.text-orange {
+    color: #F4623A !important;
+}
+
+.button {
+    padding: 1.25rem 2.25rem;
+    font: .85rem "Merriweather Sans", sans-serif;
+    border-radius: 10rem;
+}
+
+header {
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("image/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    .navbar {
+        transition: .3s;
+    }
+
+    nav {
+        a {
+            opacity: .7;
+        }
+
+        .text-dark {
+            opacity: .8;
+        }
+    }
+
+    .transition {
+        transition: .3s;
+    }
+
+    .shrinked {
+        opacity: .8;
+
+        &:hover {
+            color: #F4623A !important;
+        }
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    hr {
+        height: .2rem;
+        width: 3.25rem;
+    }
+
+    p {
+        font-size: 1.15rem;
+    }
+
+    a.btn:hover {
+        background-color: #C34E2E;
+    }
+}
+
+#about hr {
+    height: .2rem;
+    width: 3.25rem;
+}
+
+#services {
+    hr {
+        height: .2rem;
+        width: 3.25rem;
+    }
+}
+
+.hover {
+    background-color: rgba(244, 98, 58, .9);
+    transition: .3s;
+
+    span {
+        font: .85rem "Merriweather Sans", sans-serif;
+    }
+
+    h3 {
+        font: 1.2rem "Merriweather", serif;
+    }
+}
+
+#download {
+    background-color: rgb(33, 37, 41);
+}
+
+#contact {
+    label, #phone span {
+        font-family: "Merriweather", serif;
+    }
+
+    .focus {
+        border-color: #FAB19D;
+        box-shadow: 0 0 0 0.25rem rgba(244, 98, 58, 0.25);
+    }
+
+    textarea {
+        height: 10rem;
+    }
+}
