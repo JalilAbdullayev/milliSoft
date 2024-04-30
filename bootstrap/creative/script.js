@@ -16,13 +16,13 @@ $(document).ready(() => {
 
         if(scroll < about) {
             $('.nav-link').removeClass('text-orange');
-        } else if(scroll >= about && scroll < services) {
+        } else if(scroll < services) {
             $('.nav-link').removeClass('text-orange');
             $('.nav-link:first').addClass('text-orange');
-        } else if(scroll >= services && scroll < portfolio) {
+        } else if(scroll < portfolio) {
             $('.nav-link').removeClass('text-orange');
             $('.nav-link:eq(1)').addClass('text-orange');
-        } else if(scroll >= portfolio && scroll < contact) {
+        } else if(scroll < contact) {
             $('.nav-link').removeClass('text-orange');
             $('.nav-link:eq(2)').addClass('text-orange');
         } else if(scroll >= contact) {
