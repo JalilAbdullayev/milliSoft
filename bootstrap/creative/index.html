@@ -15,15 +15,15 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg bg-transparent fixed-top py-3" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
         <div class="container">
-            <div class="container-fluid">
+            <div class="container-fluid d-flex d-lg-block justify-content-between align-items-center mx-0 px-0">
                 <a class="navbar-brand fw-bolder" href="#">
                     Start Bootstrap
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
@@ -53,16 +53,16 @@
             </div>
         </div>
     </nav>
-    <div class="d-flex justify-content-center align-items-center flex-column w-100 h-100 text-white row text-center">
-        <div class="col-7">
+    <div id="header"
+         class="d-flex justify-content-center align-items-center flex-column w-100 h-100 text-white row text-center m-auto">
+        <div class="col-lg-8">
             <h1 class="mb-1">
                 Your Favorite Place for Free Bootstrap Themes
             </h1>
             <hr class="mx-auto my-4 opacity-100 border-0 bg-orange"/>
             <p class="mb-5 opacity-75">
                 Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme
-                and
-                start customizing, no strings attached!
+                and start customizing, no strings attached!
             </p>
             <a href="#" class="btn button text-white fw-bold bg-orange">
                 FIND OUT MORE
@@ -71,16 +71,15 @@
     </div>
 </header>
 <section class="page-section bg-orange" id="about">
-    <div class="d-flex justify-content-center align-items-center flex-column text-white row text-center w-100">
-        <div class="col-6">
+    <div class="container d-flex justify-content-center align-items-center flex-column text-white row text-center w-100 m-auto">
+        <div class="col-lg-8">
             <h2 class="mb-1">
                 We've got what you need!
             </h2>
             <hr class="mx-auto my-4 bg-white opacity-100 border-0"/>
             <p class="mb-4 opacity-75">
                 Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of
-                our
-                open source, free to download, and easy to use themes! No strings attached!
+                our open source, free to download, and easy to use themes! No strings attached!
             </p>
             <a href="#" class="btn button btn-light fw-bold">
                 GET STARTED!
@@ -94,8 +93,8 @@
             At Your Service
         </h2>
         <hr class="mx-auto my-4 opacity-100 border-0 bg-orange"/>
-        <div class="row mt-5">
-            <div class="col-3">
+        <div class="row mt-5 mx-auto">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-sm-5 mb-lg-0">
                 <i class="fa-regular fa-gem fs-1 mb-2 text-orange"></i>
                 <h4>
                     Sturdy Themes
@@ -104,7 +103,7 @@
                     Our themes are updated regularly to keep them bug free!
                 </p>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-sm-5 mb-lg-0">
                 <i class="fa-solid fa-laptop fs-1 mb-2 text-orange"></i>
                 <h4>
                     Up to Date
@@ -113,7 +112,7 @@
                     All dependencies are kept current to keep things fresh.
                 </p>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-sm-5 mb-lg-0">
                 <i class="fa-solid fa-globe fs-1 mb-2 text-orange"></i>
                 <h4>
                     Ready to Publish
@@ -122,7 +121,7 @@
                     You can use this design as is, or you can make changes!
                 </p>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 col-sm-12">
                 <i class="fa-regular fa-heart fs-1 mb-2 text-orange"></i>
                 <h4>
                     Made with Love
@@ -134,9 +133,10 @@
         </div>
     </div>
 </section>
-<section id="portfolio" class="row w-100 d-flex justify-content-center align-content-center align-items-center gap-0"></section>
+<section id="portfolio"
+         class="row w-100 d-flex justify-content-center align-content-center align-items-center m-0 gap-0"></section>
 <section class="page-section d-flex justify-content-center align-items-center flex-column" id="download">
-    <h2 class="text-white mb-4">
+    <h2 class="text-white text-center mb-4">
         Free Download at Start Bootstrap!
     </h2>
     <a class="btn button border-0 btn-light fw-bold" href="#">
@@ -145,17 +145,17 @@
 </section>
 <section id="contact"
          class="page-section container px-5 gx-5 d-flex justify-content-center align-items-center flex-column text-center">
-    <div class="col-6">
+    <div class="col-lg-8 col-xl-6 mx-auto">
         <h2>
             Let's Get In Touch!
         </h2>
-        <hr class="my-4"/>
+        <hr class="my-4 mx-auto"/>
         <p class="text-muted">
             Ready to start your next project with us? Send us a messages and we will get back to you as soon as
             possible!
         </p>
         <form action="" method="POST" class="needs-validation" novalidate>
-            <div class="form-floating mb-3">
+            <div class="form-floating mb-4 mb-lg-3">
                 <input type="text" required id="name" class="form-control" placeholder="Full Name"/>
                 <label for="name">
                     Full Name
@@ -167,7 +167,7 @@
                     Please enter a valid name.
                 </div>
             </div>
-            <div class="form-floating mb-3">
+            <div class="form-floating mb-4 mb-lg-3">
                 <input type="email" required id="email" class="form-control" placeholder="Email address"/>
                 <label for="email">
                     Email address
@@ -179,7 +179,7 @@
                     Please enter a valid email.
                 </div>
             </div>
-            <div class="form-floating mb-3">
+            <div class="form-floating mb-4 mb-lg-3">
                 <input type="tel" required id="tel" class="form-control" placeholder="Phone Number"/>
                 <label for="tel">
                     Phone Number
@@ -191,7 +191,7 @@
                     Please enter a valid phone number.
                 </div>
             </div>
-            <div class="form-floating mb-3">
+            <div class="form-floating mb-4 mb-lg-3">
                 <textarea class="form-control" id="message" placeholder="Message" required></textarea>
                 <label for="message">
                     Message
@@ -222,15 +222,17 @@
 </footer>
 <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered min-vw-100 d-flex justify-content-center align-items-center">
-        <div class="modal-content bg-transparent border-0 d-flex justify-content-center align-items-center position-relative">
-            <button id="left"
-                    class="fa-solid fa-caret-left text-white bg-transparent border-0 position-absolute top-50 translate-middle fs-1"></button>
+        <div class="modal-content bg-transparent border-0 d-flex justify-content-center align-items-center">
+            <div class="d-flex justify-content-between align-items-center vw-100 position-absolute z-3 px-4">
+                <button id="left"
+                        class="fa-solid fa-caret-left text-white bg-transparent border-0 fs-1"></button>
+                <button id="right"
+                        class="fa-solid fa-caret-right text-white bg-transparent border-0 fs-1"></button>
+            </div>
             <button type="button" class="btn-close align-self-end mb-5" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             <img src="" alt="" id=""/>
             <h4 class="text-white text-center mt-5"></h4>
-            <button id="right"
-                    class="fa-solid fa-caret-right text-white bg-transparent border-0 position-absolute top-50 translate-middle fs-1"></button>
         </div>
     </div>
 </div>

@@ -29,7 +29,7 @@ $(document).ready(() => {
 
     images.forEach(image => {
         $('#portfolio').append(`
-        <a class="col-4 m-0 p-0 position-relative" id="${image.id}" data-bs-toggle="modal" data-bs-target="#modal">
+        <a class="col-lg-4 col-sm-6 m-0 p-0 position-relative" id="${image.id}" data-bs-toggle="modal" data-bs-target="#modal">
         <img src="${image.src}" class="img-fluid" alt=""/>
         <div class="hover w-100 h-100 position-absolute top-50 start-50 translate-middle opacity-0">
             <div class="text-center position-absolute top-50 start-50 translate-middle">
@@ -44,6 +44,26 @@ $(document).ready(() => {
     </a>
         `);
     });
+
+    $('#portfolio a').hover(function() {
+        $(this).find('.hover')
+            .css('cursor', 'pointer')
+            .toggleClass('opacity-0');
+    }).click(function() {
+        modalImg
+            .attr('src', $(this).find('img').attr('src'))
+            .attr('id', $(this).attr('id'));
+        modalText.text($(this).find('h3').text());
+    });
+
+    if($(window).width() >= 768) {
+        if($(this).scrollTop() === 0) {
+            $('.navbar').addClass('bg-transparent').removeClass('bg-white').attr('data-bs-theme', 'dark');
+        }
+    } else {
+        $('.navbar').addClass('bg-white').removeClass('bg-transparent').attr('data-bs-theme', 'light');
+    }
+
     $(window).scroll(() => {
         const about = $('#about').offset().top - 100;
         const services = $('#services').offset().top - 100;
@@ -51,12 +71,16 @@ $(document).ready(() => {
         const contact = $('#download').offset().top - 100;
         const scroll = $(this).scrollTop();
 
-        if(scroll > 0) {
-            $('.navbar').addClass('bg-white').removeClass('bg-transparent').attr('data-bs-theme', 'light');
-            $('.nav-link, .navbar-brand').addClass('shrink');
+        if($(this).width() >= 768) {
+            if(scroll > 0) {
+                $('.navbar').addClass('bg-white').removeClass('bg-transparent').attr('data-bs-theme', 'light');
+                $('.nav-link, .navbar-brand').addClass('shrink');
+            } else {
+                $('.navbar').addClass('bg-transparent').removeClass('bg-white').attr('data-bs-theme', 'dark');
+                $('.nav-link, .navbar-brand').removeClass('shrink');
+            }
         } else {
-            $('.navbar').addClass('bg-transparent').removeClass('bg-white').attr('data-bs-theme', 'dark');
-            $('.nav-link, .navbar-brand').removeClass('shrink');
+            $('.navbar').addClass('bg-white').removeClass('bg-transparent').attr('data-bs-theme', 'light');
         }
 
         if(scroll < about) {
@@ -78,17 +102,6 @@ $(document).ready(() => {
 
     $('nav a').hover(function() {
         $(this).toggleClass('opacity-100');
-    });
-
-    $('#portfolio a').hover(function() {
-        $(this).find('.hover')
-            .css('cursor', 'pointer')
-            .toggleClass('opacity-0');
-    }).click(function() {
-        modalImg
-            .attr('src', $(this).find('img').attr('src'))
-            .attr('id', $(this).attr('id'));
-        modalText.text($(this).find('h3').text());
     });
 
     $('#left').click(function() {
