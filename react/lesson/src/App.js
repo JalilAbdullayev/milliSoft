@@ -1,25 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from "./Card";
+import Collapse from "./Collapse";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <div className="row">
+            <Collapse href='collapseExample1'>
+                <Card cardTitle='Full Stack'
+                      photo='https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg'
+                      cardContent='Lorem ipsum dolor sit amet.'
+                      updateTime='Last updated 3 mins ago'/>
+            </Collapse>
+            <Collapse href='collapseExample2'>
+                <Card cardTitle='Front End'
+                      photo='https://m.media-amazon.com/images/M/MV5BMDFlMmM4Y2QtNDg1ZS00MWVlLTlmODgtZDdhYjY5YjdhN2M0XkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_.jpg'
+                      cardContent='Lorem ipsum dolor sit amet.'
+                      updateTime='Last updated 4 mins ago'/>
+            </Collapse>
+            <Collapse href='collapseExample3'>
+                <Card cardTitle='Back End'
+                      photo='https://m.media-amazon.com/images/M/MV5BZDMyZGJjOGItYjJkZC00MDVlLWE0Y2YtZGIwMDExYWE3MGQ3XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_.jpg'
+                      cardContent='Lorem ipsum dolor sit amet.'
+                      updateTime='Last updated 5 mins ago'/>
+            </Collapse>
+            <Collapse href='collapseExample4'>
+                <Card cardTitle='MERN'
+                      photo='https://m.media-amazon.com/images/M/MV5BZDMyZGJjOGItYjJkZC00MDVlLWE0Y2YtZGIwMDExYWE3MGQ3XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_.jpg'
+                      cardContent='Lorem ipsum dolor sit amet.'
+                      updateTime='Last updated 5 mins ago'/>
+            </Collapse>
+        </div>
+    );
 }
 
 export default App;
