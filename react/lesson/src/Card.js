@@ -1,7 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Card = (props) => {
+class Card extends React.Component {
+    render() {
+        return (
+            <div className="card text-start">
+                <img src={this.props.photo} className="card-img-top" alt="..."/>
+                <div className="card-body">
+                    <h5 className="card-title">
+                        {this.props.cardTitle}
+                    </h5>
+                    <p className="card-text">
+                        {this.props.cardContent}
+                    </p>
+                    <p className="card-text"><small className="text-body-secondary">
+                        {this.props.updateTime}
+                    </small>
+                    </p>
+                </div>
+            </div>
+        )
+    }
+}
+
+/*const Card = (props) => {
     return (
         <div className="card">
             <img src={props.photo} className="card-img-top" alt="..."/>
@@ -19,7 +41,7 @@ const Card = (props) => {
             </div>
         </div>
     );
-}
+}*/
 
 Card.defaultProps = {
     cardTitle: 'Default Title',
