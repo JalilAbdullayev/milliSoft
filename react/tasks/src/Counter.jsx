@@ -1,20 +1,22 @@
 import React from 'react';
 
 export class Counter extends React.Component {
-    increment() {
-        document.querySelector('span').innerHTML++;
+    state = {
+        count: 0
+    }
+    increment = () => {
+        this.setState(plus => ({count: plus.count + 1}));
     }
 
-    decrement() {
-        document.querySelector('span').innerHTML--;
+    decrement = () => {
+        this.setState(minus => ({count: minus.count - 1}));
     }
+
     render() {
         return (
             <>
                 <h1>
-                    Count: <span>
-                    0
-                </span>
+                    Count: {this.state.count}
                 </h1>
                 <div className="btn-group" role="group">
                     <button className='btn btn-sm btn-dark' onClick={this.increment}>
