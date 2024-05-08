@@ -1,8 +1,8 @@
-import './App.css';
 import { Counter } from "./Counter";
 import { ColorPicker } from "./colorPicker";
 import { Switch } from "./Switch";
 import React from "react";
+import { EcoHarvestFilter } from "./ecoHarvestFilter";
 
 export class App extends React.Component {
     render() {
@@ -11,6 +11,7 @@ export class App extends React.Component {
                 <Counter/>
                 <ColorPicker/>
                 <Switch/>
+                <EcoHarvestFilter/>
             </>
         )
     };

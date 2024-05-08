@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+#products {
+    font-family: 'Rubik', sans-serif;
+
+    h1 {
+        font: 500 60px 'Rubik', sans-serif;
+        line-height: 1;
+        margin-bottom: 102px;
+    }
+
+    #filter {
+        margin-bottom: 105px;
+
+        button {
+            font: 500 18px 'Rubik', sans-serif;
+
+            &:after {
+                content: '';
+                background-image: url("../public/assets/image/wave.png");
+                display: block;
+                width: 76px;
+                height: 6px;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: auto;
+                position: absolute;
+                bottom: -15px;
+                left: 0;
+                right: 0;
+                opacity: 0;
+            }
+        }
+
+        .active {
+            color: #408858;
+
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    .product {
+        width: 268px;
+        height: 268px;
+        border: 1px solid #E9E9E9;
+
+        &:hover .bg {
+            transition: .3s;
+            opacity: 1 !important;
+        }
+
+        a {
+            font: 400 18px 'Rubik', sans-serif;
+
+            &:hover {
+                color: #FAB522 !important;
+                transition: .3s;
+            }
+        }
+
+        .bg {
+            background-color: rgba(64, 136, 88, 0.7);
+
+            a {
+                width: 40px;
+                height: 40px;
+                font-size: 13px;
+                line-height: 41px;
+                color: #408858;
+
+                &:hover {
+                    transition: .3s;
+                    color: #FFF !important;
+                    background-color: #FE6B51 !important;
+                }
+            }
+        }
+    }
+}
