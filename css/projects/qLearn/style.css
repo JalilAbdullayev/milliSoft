@@ -35,6 +35,11 @@ nav {
             line-height: 33px;
             color: #6A6B6C;
 
+            &:hover {
+                color: #7253A4;
+                transition: .3s;
+            }
+
             &#active {
                 font-weight: 700;
                 color: #7253A4;
@@ -208,6 +213,22 @@ header {
                 justify-content: center;
                 align-content: center;
                 border-radius: 50%;
+                position: relative;
+
+                img:first-child {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                img:last-child {
+                    position: absolute;
+                    opacity: 0;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
             }
 
             h4 {
@@ -224,6 +245,14 @@ header {
                 background-color: #7253A4;
                 color: #FFF;
                 transition: .3s;
+
+                .category-icon {
+                    background-color: #FFF;
+
+                    img:last-child {
+                        opacity: 1;
+                    }
+                }
 
                 p {
                     color: #FFF;
