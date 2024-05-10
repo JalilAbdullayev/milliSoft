@@ -1,6 +1,6 @@
 import React from "react";
 
-class Collapse extends React.Component {
+export default class Collapse extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -39,5 +39,3 @@ class Collapse extends React.Component {
         </div>
     );
 }*/
-
-export default Collapse;

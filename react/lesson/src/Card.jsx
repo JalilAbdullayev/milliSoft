@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-class Card extends React.Component {
+export class Card extends React.Component {
     render() {
         return (
             <div className="card text-start">
@@ -23,6 +23,17 @@ class Card extends React.Component {
     }
 }
 
+Card.defaultProps = {
+    cardTitle: 'Default Title',
+}
+
+Card.propTypes = {
+    cardTitle: PropTypes.string,
+    cardContent: PropTypes.string,
+    updateTime: PropTypes.string,
+    photo: PropTypes.string
+}
+
 /*const Card = (props) => {
     return (
         <div className="card">
@@ -42,15 +53,3 @@ class Card extends React.Component {
         </div>
     );
 }*/
-
-Card.defaultProps = {
-    cardTitle: 'Default Title',
-}
-
-Card.propTypes = {
-    cardTitle: PropTypes.string,
-    cardContent: PropTypes.string,
-    updateTime: PropTypes.string,
-    photo: PropTypes.string
-}
-export default Card;
