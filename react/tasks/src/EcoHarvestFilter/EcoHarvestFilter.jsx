@@ -1,6 +1,5 @@
 import React from "react";
 import './ecoHarvestFilter.css';
-import '@fortawesome/fontawesome-free/js/all.min.js';
 
 export class EcoHarvestFilter extends React.Component {
     constructor(props) {

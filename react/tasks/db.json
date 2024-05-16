@@ -1,0 +1,28 @@
+{
+  "people": [
+    {
+      "id": "1",
+      "name": "John",
+      "surname": "Doe",
+      "age": 30
+    },
+    {
+      "id": "2",
+      "name": "Jane",
+      "surname": "Doe",
+      "age": 25
+    },
+    {
+      "id": "3",
+      "name": "Jim",
+      "surname": "Carrey",
+      "age": 35
+    },
+    {
+      "name": "Cəlil",
+      "surname": "Abdullayev",
+      "age": "23",
+      "id": "5594"
+    }
+  ]
+}

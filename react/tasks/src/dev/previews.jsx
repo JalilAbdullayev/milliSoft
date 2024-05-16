@@ -1,7 +1,7 @@
 import { ComponentPreview, Previews } from '@react-buddy/ide-toolbox'
 import { PaletteTree } from './palette'
 import { App } from "../App";
-import { EcoHarvestFilter } from "../ecoHarvestFilter";
+import { EcoHarvestFilter } from "../EcoHarvestFilter/EcoHarvestFilter";
 
 const ComponentPreviews = () => {
     return (
