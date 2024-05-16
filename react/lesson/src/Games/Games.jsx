@@ -2,13 +2,16 @@ import React from "react";
 import { GameList } from "./GameList";
 import { Search } from "./Search";
 import axios from "axios";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { AddGame } from "./AddGame";
+import { EditGame } from "./EditGame";
 
 export class Games extends React.Component {
     state = {
         games: [],
-        searchWord: ''
+        searchWord: '',
+        showModal: false,
+        selectedGame: ''
     }
 
     getGames = async() => {
@@ -43,24 +46,45 @@ export class Games extends React.Component {
         this.getGames();
     }
 
+    openModal = (game) => {
+        this.setState({
+            showModal: true,
+            selectedGame: game
+        })
+    }
+
+    closeModal = () => {
+        this.setState({
+            showModal: false
+        })
+    }
+
+    editGame = async(game) => {
+        let url = `http://localhost:3001/games/${this.state.selectedGame.id}`;
+        await axios.put(url, game)
+        this.getGames();
+    }
+
     render() {
         let filteredGames = this.state.games.filter(game => {
             return game.Name.toLowerCase().indexOf(this.state.searchWord.toLowerCase()) !== -1;
         });
         return (
             <Router>
-                <Routes>
-                    <Route path='/' element={<>
-                        <Search search={this.searchGame}/>
-                        <GameList games={filteredGames} delete={this.deleteGame}/>
-                    </>}/>
-                    <Route path='/add' element={({history}) => {
-                        <AddGame add={game => {
-                            this.addGame(game);
-                            history.push('/');
-                        }}/>
+                <Route path='/' exact>
+                    <Search search={this.searchGame}/>
+                    <GameList games={filteredGames} delete={this.deleteGame} openModal={this.openModal}/>
+                    {this.state.showModal ? (
+                        <EditGame closeModal={this.closeModal} game={this.state.selectedGame}
+                                  edit={(game) => this.editGame(game)}/>
+                    ) : null}
+                </Route>
+                <Route path='/add' render={({history}) => {
+                    return <AddGame add={newGame => {
+                        this.addGame(newGame);
+                        history.push('/');
                     }}/>
-                </Routes>
+                }}/>
             </Router>
         );
     }
