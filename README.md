@@ -87,7 +87,15 @@
 * [Blog Home](https://github.com/JalilAbdullayev/milliSoft/tree/main/bootstrap/blogHome)
 * [Creative](https://github.com/JalilAbdullayev/milliSoft/tree/main/bootstrap/creative)
 
-6. [Exam](https://github.com/JalilAbdullayev/milliSoft/tree/main/exam)
+6. [React](https://github.com/JalilAbdullayev/milliSoft/tree/main/react)
+
+* [Lesson](https://github.com/JalilAbdullayev/milliSoft/tree/main/react/lesson)
+* [Tasks](https://github.com/JalilAbdullayev/milliSoft/tree/main/react/tasks)
+
+7. [SQL](https://github.com/JalilAbdullayev/milliSoft/tree/main/sql)
+
+
+8. [Exam](https://github.com/JalilAbdullayev/milliSoft/tree/main/exam)
 
 * [Exam 1](https://github.com/JalilAbdullayev/milliSoft/tree/main/exam/exam1)
 * [Exam 2](https://github.com/JalilAbdullayev/milliSoft/tree/main/exam/exam2)
