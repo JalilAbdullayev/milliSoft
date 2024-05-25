@@ -59,10 +59,9 @@ VALUES ('iPhone 13', 1),
        ('Xiaomi 13', 3),
        ('Xiaomi 14', 3),
        ('Xiaomi 15', 3),
-       ('Lenovo Legion', 4),
-       ('HP Omen', 5),
-       ('Dell Alienware', 6)
-
+       ('Legion', 4),
+       ('Omen', 5),
+       ('Alienware', 6)
 --13.
 SELECT CONCAT(model_name, ' (', LEN(model_name), ')')
 FROM models
@@ -94,8 +93,8 @@ CREATE TABLE sellers (
 
 
 INSERT INTO sellers
-VALUES (N'Jalə', N'Ələsgərova', N'Sabir', '2000-01-01', 2, 1000, 1),
-       ('Murad', N'Ələkbərov', 'Rasim', '2001-02-04', 1, 1200, 2)
+VALUES (N'Jalə', N'Ələsgərova', N'Sabir', '2000-01-01', 2, 350, 1),
+       ('Murad', N'Ələkbərov', 'Rasim', '2001-02-04', 1, 350, 2)
 
 --2.
 SELECT seller_id,
@@ -122,8 +121,14 @@ FROM sellers
 WHERE DATEDIFF(YEAR, seller_birthdate, GETDATE()) < 25
 
 --12.
-SELECT CONCAT(seller_name, ' ', seller_surname, ' ', seller_father_name) 'Name Surname Father name'
+SELECT CONCAT_WS(' ', seller_name, seller_surname, seller_father_name) 'Name Surname Father name'
 FROM sellers
+
+--2.1
+SELECT filial_name, COUNT(seller_id) 'seller_count'
+FROM sellers
+         JOIN filial ON filial.filial_id = sellers.seller_filial_id
+GROUP BY filial_name
 
 CREATE TABLE products (
     product_id             INT IDENTITY PRIMARY KEY,
@@ -159,7 +164,7 @@ FROM products
 --3.
 SELECT product_id, product_category_id, product_model_id, product_purchase_price, product_sale_price, category_name
 FROM products
-         INNER JOIN categories ON categories.category_id = products.product_category_id
+         JOIN categories ON categories.category_id = products.product_category_id
 
 --6.
 SELECT product_model_id, COUNT(product_model_id) 'model_count'
@@ -169,20 +174,27 @@ GROUP BY product_model_id
 --7.
 SELECT model_marka_id 'marka_id', model_id, SUM(product_quantity) 'product_count'
 FROM models
-         INNER JOIN products ON models.model_id = products.product_model_id
+         JOIN products ON models.model_id = products.product_model_id
 GROUP BY model_marka_id, model_id
 
---14.
-SELECT TOP 1 *
+CREATE VIEW products_view AS
+SELECT marka_name, model_name, category_name, product_purchase_price, product_sale_price
 FROM products
-ORDER BY product_sale_price DESC
+         JOIN models ON models.model_id = products.product_model_id
+         JOIN marka ON marka.marka_id = models.model_marka_id
+         JOIN categories ON categories.category_id = products.product_category_id
+
+--14.
+SELECT *
+FROM products_view
+WHERE product_sale_price = (SELECT TOP 1 MAX(product_sale_price) FROM products)
 
 --15.
 SELECT *
-FROM products
+FROM products_view
 WHERE product_sale_price = (SELECT MAX(product_sale_price) FROM products)
 UNION
-(SELECT * FROM products WHERE product_sale_price = (SELECT MIN(product_sale_price) FROM products))
+(SELECT * FROM products_view WHERE product_sale_price = (SELECT MIN(product_sale_price) FROM products))
 
 --16.
 SELECT marka_name,
@@ -213,28 +225,36 @@ VALUES (1, 1, 1, 1, 10, '2022-01-01 11:42'),
        (1, 2, 4, 1, 15, '2024-01-30 17:50'),
        (1, 1, 5, 2, 5, '2024-02-01 17:48'),
        (1, 1, 2, 1, 1, '2024-03-09 16:37'),
-       (1, 1, 5, 4, 0, '2024-04-07 14:53')
-
+       (1, 1, 5, 4, 0, '2024-04-07 14:53'),
+       (1, 2, 4, 4, 0, '2024-01-07 17:54'),
+       (1, 2, 1, 1, 0, '2024-04-13 16:44')
 --8.
 SELECT filial_name,
-       SUM(product_sale_price) - SUM(product_sale_price * sale_quantity * sale_discount / 100) 'sale_per_month',
-       MONTH(sale_datetime)                                                                    'month'
+       SUM(product_sale_price * sale_quantity * (1 - sale_discount / 100)) 'sale_per_month',
+       MONTH(sale_datetime)                                                'month',
+       YEAR(sale_datetime)                                                 'year'
 FROM sales
          JOIN sellers ON sales.sale_seller_id = sellers.seller_id
          JOIN filial ON filial.filial_id = sellers.seller_filial_id
          JOIN products ON sales.sale_product_id = products.product_id
-GROUP BY filial_name, MONTH(sale_datetime)
+GROUP BY MONTH(sale_datetime), YEAR(sale_datetime), filial_name
 
 --9.
-SELECT TOP 1 COUNT(sale_product_id) 'sale_count', SUM(sale_quantity) 'quantity', product_model_id
+SELECT TOP 1 marka_name, model_name, COUNT(sale_product_id) 'sale_count', SUM(sale_quantity) 'quantity'
 FROM sales
          JOIN products ON sales.sale_product_id = products.product_id
-GROUP BY product_model_id
+         JOIN models ON products.product_model_id = models.model_id
+         JOIN marka ON marka.marka_id = models.model_marka_id
+WHERE MONTH(sale_datetime) = MONTH('2024-01-12')
+  AND YEAR(sale_datetime) = YEAR('2024-01-12')
+GROUP BY marka_name, model_name
 ORDER BY sale_count DESC, quantity DESC
 
 --10.
 SELECT TOP 1 sale_seller_id, COUNT(sale_id) 'sale_count'
 FROM sales
+WHERE MONTH(sale_datetime) = MONTH('2024-01-12')
+  AND YEAR(sale_datetime) = YEAR('2024-01-12')
 GROUP BY sale_seller_id
 ORDER BY sale_count
 
@@ -242,13 +262,12 @@ CREATE VIEW sales_per_month_view AS
 SELECT seller_name,
        seller_surname,
        seller_father_name,
-       SUM(sale_quantity * product_sale_price -
-           sale_quantity * product_sale_price * sale_discount / 100) 'sale_per_month',
-       MONTH(sale_datetime)                                          'month'
+       SUM(sale_quantity * product_sale_price * (1 - sale_discount / 100)) 'sale_per_month',
+       sale_datetime
 FROM sales
          JOIN sellers ON sellers.seller_id = sales.sale_seller_id
          JOIN products ON products.product_id = sales.sale_product_id
-GROUP BY MONTH(sale_datetime), seller_name, seller_surname, seller_father_name
+GROUP BY sale_datetime, seller_name, seller_surname, seller_father_name
 
 --11.
 SELECT *
@@ -256,37 +275,91 @@ FROM sales_per_month_view
 WHERE sale_per_month > 3000
 
 --17.
-SELECT COUNT(sale_id) 'sale_count', MONTH(sale_datetime) 'month'
+SELECT COUNT(sale_id) 'sale_count'
 FROM sales
-WHERE MONTH(sale_datetime) = MONTH('2024-04-12 00:00:00.000')
-GROUP BY sale_datetime
+WHERE MONTH(sale_datetime) = MONTH('2024-04-12')
+  AND YEAR(sale_datetime) = YEAR('2024-04-12')
 
 CREATE VIEW sales_count_view AS
 SELECT seller_name,
        seller_surname,
        seller_father_name,
        seller_salary,
-       COUNT(sale_id)                   'sale_count',
-       MONTH('2024-04-12 00:00:00.000') 'month'
+       COUNT(sale_id) 'sale_count'
 FROM sales
          JOIN sellers ON sellers.seller_id = sales.sale_seller_id
 GROUP BY seller_name, seller_surname, seller_father_name, seller_salary
 
 --18.
 SELECT TOP 1 *
-FROM sales_count_view
-ORDER BY sale_count DESC
-
---19.
-SELECT TOP 1 *
 FROM sales_per_month_view
-WHERE month = MONTH('2024-04-12 00:00:00.000')
+WHERE MONTH(sale_datetime) = MONTH('2024-04-12')
+  AND YEAR(sale_datetime) = YEAR('2024-04-12')
 ORDER BY sale_per_month DESC
 
+--19.
+SELECT TOP 1 seller_name,
+             seller_surname,
+             seller_father_name,
+             SUM(sale_quantity * product_sale_price * (1 - sale_discount / 100) -
+                 sales.sale_quantity * product_purchase_price) 'sale_per_month'
+FROM sales
+         JOIN products ON products.product_id = sales.sale_product_id
+         JOIN sellers ON sellers.seller_id = sales.sale_seller_id
+WHERE MONTH(sale_datetime) = MONTH('2024-04-12')
+  AND YEAR(sale_datetime) = YEAR('2024-04-12')
+GROUP BY seller_name, seller_surname, seller_father_name
+
 --20.
-UPDATE sellers
-SET seller_salary = seller_salary * 1.5
+SELECT seller_name, seller_surname, seller_father_name, seller_salary = seller_salary * 1.5
+FROM sellers
 WHERE seller_id = (SELECT TOP 1 seller_id
                    FROM sales_count_view
                             JOIN sellers ON sales_count_view.seller_surname = sellers.seller_surname
                    ORDER BY sale_count DESC)
+
+--2.2
+SELECT filial_name, COUNT(sale_id) * SUM(sale_quantity) 'sold_products'
+FROM sales
+         JOIN products ON products.product_id = sales.sale_product_id
+         JOIN sellers ON sellers.seller_id = sales.sale_seller_id
+         JOIN filial ON sellers.seller_filial_id = filial.filial_id
+GROUP BY filial_name
+
+--2.3
+SELECT *
+FROM sales_per_month_view
+WHERE MONTH(sale_datetime) = MONTH('2024-04-12')
+  AND YEAR(sale_datetime) = YEAR('2024-04-12')
+
+--2.4
+SELECT seller_name,
+       seller_surname,
+       seller_father_name,
+       seller_salary + (SUM(sale_quantity * product_sale_price * (1 - sale_discount / 100)) * 0.01) 'salary'
+FROM sales
+         JOIN products ON products.product_id = sales.sale_product_id
+         JOIN sellers s ON s.seller_id = sales.sale_seller_id
+WHERE MONTH(sale_datetime) = MONTH('2024-04-12')
+  AND YEAR(sale_datetime) = YEAR('2024-04-12')
+GROUP BY seller_name, seller_surname, seller_father_name, seller_salary
+
+--2.5
+SELECT filial_name,
+       SUM(sale_quantity * product_sale_price * (1 - sale_discount / 100)) 'sale_amount'
+FROM sales
+         JOIN sellers ON sellers.seller_id = sales.sale_seller_id
+         JOIN filial ON filial.filial_id = sellers.seller_filial_id
+         JOIN products ON products.product_id = sales.sale_product_id
+WHERE MONTH(sale_datetime) = MONTH('2024-04-12')
+GROUP BY filial_name
+
+--2.6
+SELECT SUM(sale_quantity * product_sale_price * (1 - sale_discount / 100))   'sale_amount',
+       SUM(sale_quantity * product_purchase_price -
+           (sale_quantity * product_sale_price * (1 - sale_discount / 100))) 'profit'
+FROM sales
+         JOIN products
+              ON products.product_id = sales.sale_product_id
+WHERE MONTH(sale_datetime) = MONTH('2024-04-12')
+  AND YEAR(sale_datetime) = YEAR('2024-04-12')
