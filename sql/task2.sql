@@ -131,28 +131,30 @@ FROM sellers
 GROUP BY filial_name
 
 CREATE TABLE products (
-    product_id             INT IDENTITY PRIMARY KEY,
-    product_category_id    INT FOREIGN KEY REFERENCES categories(category_id),
-    product_model_id       INT FOREIGN KEY REFERENCES models(model_id),
-    product_purchase_price FLOAT NOT NULL,
-    product_sale_price     FLOAT NOT NULL,
-    product_quantity       INT   NOT NULL DEFAULT 0
+    product_id              INT IDENTITY PRIMARY KEY,
+    product_category_id     INT FOREIGN KEY REFERENCES categories(category_id),
+    product_model_id        INT FOREIGN KEY REFERENCES models(model_id),
+    product_purchase_price  FLOAT NOT NULL,
+    product_sale_price      FLOAT NOT NULL,
+    product_quantity        INT   NOT NULL DEFAULT 0,
+    product_expiration_date DATETIME,
+    product_status          BIT            DEFAULT 0
 )
 
 INSERT INTO products
-VALUES (2, 1, 1000, 2000, 2),
-       (2, 2, 2000, 3000, 1),
-       (3, 10, 10000, 20000, 3),
-       (3, 11, 20000, 30000, 4),
-       (3, 12, 30000, 40000, 2),
-       (2, 2, 4000, 5000, 1),
-       (2, 3, 900, 1070, 5),
-       (2, 4, 1000, 1340, 11),
-       (2, 5, 1600, 2140, 14),
-       (2, 6, 2000, 3040, 9),
-       (2, 7, 1100, 1250, 7),
-       (2, 8, 1700, 1900, 3),
-       (2, 9, 1800, 2000, 4)
+VALUES (2, 1, 1000, 2000, 2, '2024-05-30 10:46:20', 1),
+       (2, 2, 2000, 3000, 1, '2024-05-30 10:46:20', 1),
+       (3, 10, 10000, 20000, 3, '2024-05-30 10:46:20', 1),
+       (3, 11, 20000, 30000, 4, '2024-05-30 10:46:20', 1),
+       (3, 12, 30000, 40000, 2, '2024-05-30 10:46:20', 1),
+       (2, 2, 4000, 5000, 1, '2024-05-30 10:46:20', 1),
+       (2, 3, 900, 1070, 5, '2024-05-30 10:46:20', 1),
+       (2, 4, 1000, 1340, 11, '2024-05-30 10:46:20', 1),
+       (2, 5, 1600, 2140, 14, '2024-05-30 10:46:20', 1),
+       (2, 6, 2000, 3040, 9, '2024-05-30 10:46:20', 1),
+       (2, 7, 1100, 1250, 7, '2024-05-30 10:46:20', 1),
+       (2, 8, 1700, 1900, 3, '2024-05-30 10:46:20', 1),
+       (2, 9, 1800, 2000, 4, '2024-05-30 10:46:20', 1)
 
 --1.
 SELECT product_id, model_name, category_name, marka_name, product_purchase_price, product_sale_price
