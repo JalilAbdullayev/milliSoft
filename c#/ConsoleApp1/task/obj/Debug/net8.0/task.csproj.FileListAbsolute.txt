@@ -1,0 +1,15 @@
+D:\Programming\Millisoft\c#\ConsoleApp1\task\bin\Debug\net8.0\task.exe
+D:\Programming\Millisoft\c#\ConsoleApp1\task\bin\Debug\net8.0\task.deps.json
+D:\Programming\Millisoft\c#\ConsoleApp1\task\bin\Debug\net8.0\task.runtimeconfig.json
+D:\Programming\Millisoft\c#\ConsoleApp1\task\bin\Debug\net8.0\task.dll
+D:\Programming\Millisoft\c#\ConsoleApp1\task\bin\Debug\net8.0\task.pdb
+D:\Programming\Millisoft\c#\ConsoleApp1\task\obj\Debug\net8.0\task.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Millisoft\c#\ConsoleApp1\task\obj\Debug\net8.0\task.AssemblyInfoInputs.cache
+D:\Programming\Millisoft\c#\ConsoleApp1\task\obj\Debug\net8.0\task.AssemblyInfo.cs
+D:\Programming\Millisoft\c#\ConsoleApp1\task\obj\Debug\net8.0\task.csproj.CoreCompileInputs.cache
+D:\Programming\Millisoft\c#\ConsoleApp1\task\obj\Debug\net8.0\task.sourcelink.json
+D:\Programming\Millisoft\c#\ConsoleApp1\task\obj\Debug\net8.0\task.dll
+D:\Programming\Millisoft\c#\ConsoleApp1\task\obj\Debug\net8.0\refint\task.dll
+D:\Programming\Millisoft\c#\ConsoleApp1\task\obj\Debug\net8.0\task.pdb
+D:\Programming\Millisoft\c#\ConsoleApp1\task\obj\Debug\net8.0\task.genruntimeconfig.cache
+D:\Programming\Millisoft\c#\ConsoleApp1\task\obj\Debug\net8.0\ref\task.dll
