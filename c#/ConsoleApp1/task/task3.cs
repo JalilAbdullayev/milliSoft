@@ -3,7 +3,7 @@
 namespace task;
 
 public class Task3 {
-    public static void Main() {
+    /*public static void Main() {
         // Console.WriteLine(sum(5, 5));
         // Console.WriteLine(CheckInteger());
         // Console.WriteLine(CheckEven());
@@ -33,7 +33,7 @@ public class Task3 {
         // CompareArrays();
         // Console.WriteLine(EdedSoz());
         /*Artma();
-        Azalma();*/
+        Azalma();#1#
         // Anagram();
         // VowelConsonant();
         // Twelve();
@@ -43,8 +43,8 @@ public class Task3 {
         // FirstUpperSen();
         // RandomDateBetween();
         // WeekDay();
-        WorkDays();
-    }
+        // WorkDays();
+    }*/
 
     //1.
     public static double sum(double n1, double n2) {
@@ -569,6 +569,29 @@ public class Task3 {
                     }
                 }
             }
+        }
+    }
+
+    //38.
+    public static void Zeros() {
+        int[] nums = {1, 0, 2, 3, 0, 4, 5, 0, 6, 7, 0, 8, 9, 0};
+        int count = 0, firstIndex = 0, lastIndex = 0;
+        for(int i = 0; i < nums.Length; i++) {
+            if(nums[i] == 0) {
+                firstIndex = i;
+                break;
+            }
+        }
+
+        for(int i = nums.Length - 1; i >= 0; i--) {
+            if(nums[i] == 0) {
+                lastIndex = i;
+                break;
+            }
+        }
+
+        for(int i = firstIndex + 1; i < lastIndex; i++) {
+            count++;
         }
     }
 
