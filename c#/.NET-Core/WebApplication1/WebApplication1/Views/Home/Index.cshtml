@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Ana Səhifə";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+@model List<WebApplication1.Models.Product>
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+<ul>
+    @{
+        foreach(var item in Model) {
+            <li>
+                @item.Name @item.Description @item.Price
+            </li>
+        }
+    }
+</ul>
